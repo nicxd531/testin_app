@@ -27,13 +27,9 @@ h3 {
 .main-dot{
   position: relative;
   height: fit-content;
-  
   display: inline;
   opacity: 0.8;
   display: inline-block;
-}
-.Home>section{
-  border: 1px red solid
 }
 .Home>section>h3{
   font-size: 20px;
