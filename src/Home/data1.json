@@ -1,0 +1,19 @@
+[
+    {
+        "heading":"Testing",
+        "body":"Testing app is an app that was designed by Ola Olasunkanmi to help him test the new skill he just aquired i a place where he can come back and revist later , to learn from and alos teach others seeking knowledge",
+        "status":"in-progress"
+    },
+    {
+        "heading":"React",
+        "body":"React is an open-source JavaScript library for building user interfaces, particularly for dynamic, single-page applications. It revolves around components, reusable UI pieces managed through a virtual DOM. Using JSX syntax, it offers a unidirectional data flow, and components can manage local state and receive data via props. React Router facilitates navigation, while state management can be handled using React's built-in features or external libraries like Redux. Introduced in React 16.8, hooks allow functional components to use state and other React features. Overall, React provides an efficient and declarative approach to building interactive web interfaces.",
+        "status":"completed"
+    }
+    ,
+    {
+        "heading":"Redux",
+        "body":"Redux is a predictable state management library for JavaScript applications, commonly used with React. It centralizes and manages the application's state in a single store, making state changes predictable and traceable. Actions are dispatched to trigger state updates, and pure functions called reducers specify how the state should change in response to actions. Redux enables a unidirectional data flow and simplifies state management in complex applications by providing a clear structure for handling and updating application state.",
+        "status":"in-progress"
+    }
+
+]

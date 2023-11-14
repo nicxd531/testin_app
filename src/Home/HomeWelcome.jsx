@@ -8,7 +8,7 @@ function HomeWelcome({greeting}) {
     const list =["Redux" , "React","React Hooks","useEffect","useContext","useReff","Material UI"]
 
   return (
-    <section className='p-3 py-5  d-flex  flex-column '>
+    <section className='p-3 py-5  d-flex  flex-column text-lg-center p-lg-5'>
       <Greetings/>
       <h2 className=''>Welcome to </h2>
       <h1 className='fw-bold'>Testing App</h1>

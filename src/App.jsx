@@ -6,6 +6,7 @@ import ReduxHome from './Redux/ReduxHome'
 import ReactHome from './React_Hooks/ReactHome'
 import NavBar from './components/NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './Home/Footer'
 
 function App() {
   
@@ -19,6 +20,7 @@ function App() {
           <Route path='/reduxHome' element={<ReduxHome/>} />
           <Route path='/reactHome/*' element={<ReactHome/>} />
         </Routes>
+        <Footer/>
       </Router>
     </div>
   )
