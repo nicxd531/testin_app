@@ -1,6 +1,6 @@
 
 /* font import from googles as prescribed by the designer */
-@import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800&display=swap');
 /* reset css for the whole page */
 html,
 body,
@@ -17,8 +17,10 @@ h3 {
   box-sizing: border-box;
   scroll-behavior: smooth;
   color: inherit;
-  font-family: 'Lato', sans-serif, cursive;
-}
+  font-family: 'Fasthand', cursive;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto Serif', serif;
+}  
 
 .Home{
   background-image: url(/image/silvio-kundt-Fixg8KipOg8-unsplash.jpg);
