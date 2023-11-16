@@ -114,6 +114,11 @@ h3 {
 .redux-home>header{
   padding-top: 80px;
 }
+/*=========redux tuts 1==========*/
+.redux-tut-1{
+  margin-bottom: 100px;
+
+}
 @media (min-width: 992px) { 
   .faq-accordion{
     width: 50vw;
