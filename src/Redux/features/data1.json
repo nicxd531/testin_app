@@ -1,0 +1,22 @@
+[   
+    {
+        "title":"store(configureStore)",
+        "image":"/image/store.png",
+        "description":"In Redux Toolkit, the createSlice function is a powerful utility for defining Redux state slices, encapsulating both the reducer function and action creators in a single module. With createSlice, developers can declare a set of initial state, a reducer function to handle actions, and automatically generate corresponding action creators. This encourages a more modular and organized code structure by consolidating related logic in one place. The generated action creators are automatically tied to the reducer, reducing the need for manually defining action types. Additionally, createSlice simplifies the process of handling immutable updates to the state, providing a concise and intuitive syntax for modifying data within the reducer. Overall, createSlice significantly reduces the boilerplate associated with Redux, enhancing code readability and maintainability."
+    },
+    {
+        "title":"store(configureStore)",
+        "image":"/image/store.png",
+        "description":"In Redux Toolkit, the createSlice function is a powerful utility for defining Redux state slices, encapsulating both the reducer function and action creators in a single module. With createSlice, developers can declare a set of initial state, a reducer function to handle actions, and automatically generate corresponding action creators. This encourages a more modular and organized code structure by consolidating related logic in one place. The generated action creators are automatically tied to the reducer, reducing the need for manually defining action types. Additionally, createSlice simplifies the process of handling immutable updates to the state, providing a concise and intuitive syntax for modifying data within the reducer. Overall, createSlice significantly reduces the boilerplate associated with Redux, enhancing code readability and maintainability."
+    },
+    {
+        "title":"store(configureStore)",
+        "image":"/image/store.png",
+        "description":"In Redux Toolkit, the createSlice function is a powerful utility for defining Redux state slices, encapsulating both the reducer function and action creators in a single module. With createSlice, developers can declare a set of initial state, a reducer function to handle actions, and automatically generate corresponding action creators. This encourages a more modular and organized code structure by consolidating related logic in one place. The generated action creators are automatically tied to the reducer, reducing the need for manually defining action types. Additionally, createSlice simplifies the process of handling immutable updates to the state, providing a concise and intuitive syntax for modifying data within the reducer. Overall, createSlice significantly reduces the boilerplate associated with Redux, enhancing code readability and maintainability."
+    },
+    {
+        "title":"createSlice",
+        "image":"/image/createSlice.png",
+        "description":"In Redux Toolkit, the createSlice function is a powerful utility for defining Redux state slices, encapsulating both the reducer function and action creators in a single module. With createSlice, developers can declare a set of initial state, a reducer function to handle actions, and automatically generate corresponding action creators. This encourages a more modular and organized code structure by consolidating related logic in one place. The generated action creators are automatically tied to the reducer, reducing the need for manually defining action types. Additionally, createSlice simplifies the process of handling immutable updates to the state, providing a concise and intuitive syntax for modifying data within the reducer. Overall, createSlice significantly reduces the boilerplate associated with Redux, enhancing code readability and maintainability."
+    }
+]

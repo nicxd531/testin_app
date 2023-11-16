@@ -81,7 +81,16 @@ h3 {
   animation: rotate 3s linear infinite; /* Infinite rotation */
   cursor: pointer;
 }
-
+.explanation > hr{
+  height:4px;
+}
+.explanation >p{
+  text-align: justify;
+  
+}
+.text-justify{
+  text-align: justify;
+}
 /* Animation for infinite rotation */
 @keyframes rotate {
   0% {
@@ -115,10 +124,7 @@ h3 {
   padding-top: 80px;
 }
 /*=========redux tuts 1==========*/
-.redux-tut-1{
-  margin-bottom: 100px;
 
-}
 @media (min-width: 992px) { 
   .faq-accordion{
     width: 50vw;

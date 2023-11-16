@@ -7,6 +7,8 @@ import { Provider } from 'react-redux';
 import userReducer from "./features/User"
 import themeReducer from "./features/Theme"
 import userStatusReducer from './features/UserStatus';
+import Explation from '../components/Explation';
+import data1 from "./features/data1.json"
 
 
 const store = configureStore({
@@ -18,10 +20,11 @@ const store = configureStore({
 })
 
 function ReduxHome() {
+  const usage ="Redux Toolkit is a collection of utilities and conventions designed to simplify the development of Redux-based applications. It streamlines the implementation of Redux by offering tools like createSlice for combining action creators and reducers, simplifying asynchronous logic with createAsyncThunk, and providing a more opinionated configuration of the Redux store through configureStore. Redux Toolkit aims to reduce boilerplate code, encourage best practices, and enhance the developer experience, making it easier to manage state in complex applications while seamlessly integrating with the Redux DevTools Extension for effective debugging."
   return (
     <Provider store={store}>
-      <main className='redux-home p-3 pb-5'>
-        <header className='mb-3'>
+      <main className='redux-home p-3 pb-5 '>
+        <header className='mb-3 '>
           <h1>HOME OF REDUX</h1>
           <h4>This section contains redux examples and explations of diffrent redux concepts</h4>
         </header>
@@ -40,6 +43,7 @@ function ReduxHome() {
             </Tab>
           </Tabs>
         </section>
+        <Explation useage={usage} data={data1}/>
       </main>
     </Provider>
   )
