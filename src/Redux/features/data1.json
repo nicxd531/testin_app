@@ -5,18 +5,24 @@
         "description":"In Redux Toolkit, the createSlice function is a powerful utility for defining Redux state slices, encapsulating both the reducer function and action creators in a single module. With createSlice, developers can declare a set of initial state, a reducer function to handle actions, and automatically generate corresponding action creators. This encourages a more modular and organized code structure by consolidating related logic in one place. The generated action creators are automatically tied to the reducer, reducing the need for manually defining action types. Additionally, createSlice simplifies the process of handling immutable updates to the state, providing a concise and intuitive syntax for modifying data within the reducer. Overall, createSlice significantly reduces the boilerplate associated with Redux, enhancing code readability and maintainability."
     },
     {
-        "title":"store(configureStore)",
-        "image":"/image/store.png",
-        "description":"In Redux Toolkit, the createSlice function is a powerful utility for defining Redux state slices, encapsulating both the reducer function and action creators in a single module. With createSlice, developers can declare a set of initial state, a reducer function to handle actions, and automatically generate corresponding action creators. This encourages a more modular and organized code structure by consolidating related logic in one place. The generated action creators are automatically tied to the reducer, reducing the need for manually defining action types. Additionally, createSlice simplifies the process of handling immutable updates to the state, providing a concise and intuitive syntax for modifying data within the reducer. Overall, createSlice significantly reduces the boilerplate associated with Redux, enhancing code readability and maintainability."
-    },
-    {
-        "title":"store(configureStore)",
-        "image":"/image/store.png",
-        "description":"In Redux Toolkit, the createSlice function is a powerful utility for defining Redux state slices, encapsulating both the reducer function and action creators in a single module. With createSlice, developers can declare a set of initial state, a reducer function to handle actions, and automatically generate corresponding action creators. This encourages a more modular and organized code structure by consolidating related logic in one place. The generated action creators are automatically tied to the reducer, reducing the need for manually defining action types. Additionally, createSlice simplifies the process of handling immutable updates to the state, providing a concise and intuitive syntax for modifying data within the reducer. Overall, createSlice significantly reduces the boilerplate associated with Redux, enhancing code readability and maintainability."
+        "title":"provider",
+        "image":"/image/provider.png",
+        "description":"In the context of Redux Toolkit, the Provider is not specifically a part of Redux Toolkit itself but is commonly associated with the integration of Redux into a React application. The Provider is a component provided by the react-redux library, which facilitates the connection between a React application and the Redux store. When using Redux Toolkit with React, the Provider is used to wrap the root component of the application, supplying the Redux store to all components in the component tree. This ensures that each component can access the Redux store and dispatch actions as needed. The Provider simplifies the process of passing the store down manually through props, making Redux state management seamlessly available to React components within the application."
     },
     {
         "title":"createSlice",
         "image":"/image/createSlice.png",
         "description":"In Redux Toolkit, the createSlice function is a powerful utility for defining Redux state slices, encapsulating both the reducer function and action creators in a single module. With createSlice, developers can declare a set of initial state, a reducer function to handle actions, and automatically generate corresponding action creators. This encourages a more modular and organized code structure by consolidating related logic in one place. The generated action creators are automatically tied to the reducer, reducing the need for manually defining action types. Additionally, createSlice simplifies the process of handling immutable updates to the state, providing a concise and intuitive syntax for modifying data within the reducer. Overall, createSlice significantly reduces the boilerplate associated with Redux, enhancing code readability and maintainability."
+    },
+    {
+        "title":"useDispatch",
+        "image":"/image/usedispatch.png",
+        "description":"In React with Redux Toolkit, the useDispatch hook is a utility provided by the react-redux library. It allows functional components to access the Redux store's dispatch function without explicitly connecting the component to the store using the connect higher-order component. The dispatch function is essential for triggering actions that can modify the state in the Redux store. With useDispatch, components can dispatch actions directly within functional components, simplifying the process of interacting with the Redux store. This hook is a convenient way to integrate Redux state management into React components, enabling them to initiate changes in the application state by dispatching actions to the Redux store."
+    }
+    ,
+    {
+        "title":"useSelector",
+        "image":"/image/usedispatch.png",
+        "description":" In React with Redux Toolkit, the useSelector hook is a utility provided by the react-redux library. It enables functional components to extract and subscribe to specific slices of the Redux store's state. By using useSelector, components can selectively access and consume the portions of the global state that are relevant to them. This hook is particularly useful for efficiently integrating Redux state into React components, allowing them to reactively update in response to changes in the Redux store. useSelector helps avoid unnecessary re-renders by only triggering updates when the selected part of the state changes. This enhances performance and simplifies the process of accessing and displaying data from the Redux store within React components."
     }
 ]
