@@ -13,7 +13,7 @@
     {
         "heading":"Redux",
         "body":"Redux is a predictable state management library for JavaScript applications, commonly used with React. It centralizes and manages the application's state in a single store, making state changes predictable and traceable. Actions are dispatched to trigger state updates, and pure functions called reducers specify how the state should change in response to actions. Redux enables a unidirectional data flow and simplifies state management in complex applications by providing a clear structure for handling and updating application state.",
-        "status":"in-progress"
+        "status":"completed"
     }
 
 ]
