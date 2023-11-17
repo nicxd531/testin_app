@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 
 
 function ColorSelector({dispatch,changeColor}) {
+  // this component  conatins the colour picker logic to select a colour for the text
     const selectChange =(e)=>{
         dispatch(changeColor(e.target.value))
       }

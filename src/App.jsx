@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './Home/Footer'
 
 function App() {
+  // this component only contains router for the whole app
   
 
   return (
@@ -17,7 +18,7 @@ function App() {
         <NavBar/>
         <Routes>
           <Route path='/' element={<Home/>} />
-          <Route path='/reduxHome' element={<ReduxHome/>} />
+          <Route path='/reduxHome/*' element={<ReduxHome/>} />
           <Route path='/reactHome/*' element={<ReactHome/>} />
         </Routes>
         <Footer/>

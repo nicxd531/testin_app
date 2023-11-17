@@ -91,6 +91,9 @@ h3 {
 .text-justify{
   text-align: justify;
 }
+.zi-1{
+  z-index: 1;
+}
 /* Animation for infinite rotation */
 @keyframes rotate {
   0% {

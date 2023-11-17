@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary position-fixed w-100">
+    <Navbar expand="lg" className="bg-body-tertiary position-fixed w-100 zi-1">
         <Container>
             <Navbar.Brand className='w-25 fw-bold fs-2' href="/">Testing App</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />

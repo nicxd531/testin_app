@@ -1,13 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialStateValue =false;
-
+// this component contains the useSlice method that houses the data for each reeducers
 export const userStatusSlice  = createSlice({
     name: "userStatus",
     initialState:{value:initialStateValue},
     reducers: {
         userStatus: (state, action) => {
-        console.log(action.payload)
             state.value = action.payload;
         }
     }

@@ -9,12 +9,12 @@ import Form from 'react-bootstrap/Form';
 
 
 function Login() {
+    // this component is used to login to the profile component and also contains the colour picker logic to switch the text colour
     const[data, setData]= useState({
         name: "", 
         age: "", 
         email:""
     }) 
-console.log(data)
     const dispatch = useDispatch();
     const dispatch2 = useDispatch();
     const handleClick=()=>{
@@ -24,7 +24,7 @@ console.log(data)
             dispatch2(userStatus(true))
     }
   return (
-    <section className='d-flex flex-column'>
+    <section className='d-flex flex-column  border bg-secondary text-white p-5 w-75'>
         <header className='fs-1 fw-bold text-uppercase mb-5'>welcome </header>
         <Form 
         onSubmit={handleClick}
@@ -58,7 +58,7 @@ console.log(data)
         </Form>
         <button 
         onClick={handleClick}
-        className='btn btn-success  btn-sm px-3 mx-3'>
+        className='btn btn-success  btn-sm px-3 mx-3 w-25'>
             login
         </button>
         

@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form';
 import {useState} from 'react'
 
 function ColorPicker({dispatch,changeColor}) {
+  // this component contain the color picker logic from bootstrap
     const [color, setColor] = useState("");
   return (
     <div className='d-flex flex-column align-items-center'> 

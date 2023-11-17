@@ -8,6 +8,8 @@ import ChangeColor from './ChangeColor'
 
 
 function Profile() {
+  // this component is used to dipaly the loged in profile
+  // this component contains two use selector method that is used o fetch both the theme and user value stored in the main store
     const user = useSelector((state)=> state.user.value);
     const themeColor= useSelector((state)=> state.theme.value);
     const dispatch = useDispatch();
@@ -23,7 +25,7 @@ function Profile() {
   return (
     <section
     style={{color:themeColor}}
-    className='d-flex flex-column align-items-center'
+    className='d-flex flex-column align-items-center w-75 border bg-secondary p-5'
     >
         <h1 className='fs-1 text-uppercase'>Profile page</h1>
         <div className='text-center'>
