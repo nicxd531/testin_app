@@ -7,22 +7,27 @@ function ReactHomeNav() {
     <Nav variant="tabs" defaultActiveKey="/home">
       <Nav.Item>
         <Nav.Link eventKey="link-4">
-            <Link to={"/reactHome"}>useState</Link>
+            <Link className='fs-5 text-success fw-bold' to={"/reactHome"}>useState</Link>
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
         <Nav.Link eventKey="link-1">
-            <Link to={"/reactHome/useContext"}>useContext</Link>
+            <Link className='fs-5 text-success fw-bold' to={"/reactHome/useContext"}>useContext</Link>
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
         <Nav.Link eventKey="link-2">
-            <Link to={"/reactHome/useEffect"}>useEffect</Link>
+            <Link className='fs-5 text-success fw-bold' to={"/reactHome/useEffect"}>useEffect</Link>
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-3">
-            <Link to={"/reactHome/useRef"}>useRef</Link>
+        <Nav.Link  to={"/reactHome/useRef"} eventKey="link-3">
+            <Link className='fs-5 text-success fw-bold' to={"/reactHome/useRef"}>useRef</Link>
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="link-5" to={"/reactHome/useReducer"}>
+            <Link className='fs-5 text-success fw-bold' to={"/reactHome/useReducer"}>useReducer</Link>
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>

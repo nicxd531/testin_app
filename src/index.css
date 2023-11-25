@@ -120,10 +120,10 @@ h3 {
 }
 
 /*====================================redux=================================*/
-.redux-home{
+.redux-home,.react-home{
   background-image: url(/image/silvio-kundt-Fixg8KipOg8-unsplash.jpg);
 }
-.redux-home>header{
+.redux-home>header,.react-home>header{
   padding-top: 80px;
 }
 /*=========redux tuts 1==========*/

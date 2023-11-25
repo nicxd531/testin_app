@@ -33,6 +33,9 @@ function NavBar() {
                     <NavDropdown.Item className='px-4'>
                         <Link to={"/reactHome/useRef"}>useRef</Link>
                     </NavDropdown.Item>
+                    <NavDropdown.Item className='px-4'>
+                        <Link to={"/reactHome/useReducer"}>useReducer</Link>
+                    </NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item className='px-4'>
                          <Link to={"/reactHome"}>React Hooks Home</Link>
