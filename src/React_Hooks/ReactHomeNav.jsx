@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
 
 function ReactHomeNav() {
+  // this component contains imported bootstrap component
   return (
     <Nav variant="tabs" defaultActiveKey="/home">
       <Nav.Item>

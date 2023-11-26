@@ -5,9 +5,9 @@ import { LoginContext } from './usecontext/LoginContext';
 
 
 function UseContext1() {
+  // list of states uses foe showing profiles and setting userName
   const [showProfile, setShowProfile]=useState(false)
   const [username, setUsername]=useState("")
-  
   return (
     <section className='d-flex  justify-content-center flex-column align-items-center'>
       <LoginContext.Provider value={{username ,setUsername,setShowProfile}}>

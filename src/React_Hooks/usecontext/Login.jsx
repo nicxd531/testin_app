@@ -4,7 +4,9 @@ import Form from 'react-bootstrap/Form';
 import { LoginContext } from './LoginContext';
 
 function Login() {
+  // use context hook for fetching setusername and setShowProfile
    const {setUsername,setShowProfile}=useContext(LoginContext);
+  //  handle submit function for preventing refresh and setting showProfile
   const handleSubmit=(e)=>{
     e.preventDefault()
     setShowProfile(true)

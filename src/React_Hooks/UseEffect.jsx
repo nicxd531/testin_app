@@ -1,19 +1,22 @@
 import React, {useState, useEffect} from 'react'
 
-
 function UseEffect() {
+  // use state hook for setting states for resourcetype,items and windowWidth 
  const  [resourceType, setResourseType]=useState("")
  const  [items, setItems]=useState("")
  const  [windowWidth, setWindowWidth]=useState(window.innerWidth)
+//  function foe setting windowWidth
  const handleResize = () =>{
   setWindowWidth(window.innerWidth)
  }
+//  useEffect hook for fetching data and setting items state
  useEffect(( )=>{
   fetch(`https://jsonplaceholder.typicode.com/${resourceType}`)
       .then(response => response.json())
       .then(json => setItems(json))
       console.log(items)
- },[resourceType])
+ },[resourceType]);
+//  useEffect hook for fetching widowswidth and running the handleResize function
  useEffect(()=>{
   window.addEventListener("resize",handleResize)
  },[])

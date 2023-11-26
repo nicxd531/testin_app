@@ -1,5 +1,6 @@
 import React,{useReducer} from 'react'
 
+// reducer function with a switch case function to return a value 
 const reducer =(state,action)=>{
     switch (action.type){
         case "increment":
@@ -14,18 +15,17 @@ const reducer =(state,action)=>{
             throw new Error();
     }
 }
-
+// actions for illustrating the types
 const ACTION ={
     INCREMENT: "increment",
     DECREMENT:"decrement",
     NEW_USER_INPUT:"newUserInput",
     TG_COLOR: "tgColor"
 }
-
+// this is the main rendered component
 function UseReducer() {
+    // use reducer hook for holding state and dispatch ,the useReducer function takes in a a function and initial state
     const [state, dispatch] =useReducer(reducer,{count: 0,userInput: "", color: false})
-   
-    
   return (
     <section className='text-center d-flex flex-column align-items-center pb-5' style={{color:state.color ? "#fff" : "#fff952"}}>
         <div class="input-group input-group-lg w-50 mt-4">

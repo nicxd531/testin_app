@@ -8,6 +8,7 @@ import ReactHomeNav from './ReactHomeNav'
 import UseReducer from './UseReducer'
 
 function ReactHome() {
+  // this comoponent contains routers for react hooks 
   return (
     <main  className='react-home  p-3'>
       <header className='mb-3'>

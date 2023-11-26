@@ -1,8 +1,12 @@
 import React,{useState} from 'react'
 
 function Question() {
+    // this component only contains states and html tags 
+    // use state hook for right answers
     const [rightAnswer, setRightAnswer]=useState(false)
+    // use state hook for wrong answers
     const [wrongAnswer, setWrongAnswer]=useState(false)
+    // use state hook for revealing answers
     const [reavealAnswer, setRevealAnswer]=useState(false)
     
   return (
@@ -10,7 +14,6 @@ function Question() {
         <div className='w-75'>
          <h2 className='bg-success text-center'>Question</h2>
         </div>
-
         <div className='my-3'>
             <h3>Pick the right answer</h3>
             <div className='mt-3'>
