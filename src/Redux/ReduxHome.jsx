@@ -51,7 +51,7 @@ function ReduxHome() {
             </Tab>
           </Tabs>
         </section>
-        <Explation useage={usage} data={data1}/>
+        <Explation usage={usage} data={data1}/>
       </main>
     </Provider>
   )
