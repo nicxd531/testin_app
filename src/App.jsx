@@ -7,6 +7,7 @@ import ReactHome from './React_Hooks/ReactHome'
 import NavBar from './components/NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './Home/Footer'
+import MaterialHome from './materialUi/MaterialHome'
 
 function App() {
   // this component only contains router for the whole app
@@ -20,6 +21,7 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/reduxHome/*' element={<ReduxHome/>} />
           <Route path='/reactHome/*' element={<ReactHome/>} />
+          <Route path='/materialUi/*' element={<MaterialHome/>} />
         </Routes>
         <Footer/>
       </Router>

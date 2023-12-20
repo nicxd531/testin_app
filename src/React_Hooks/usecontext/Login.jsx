@@ -12,7 +12,7 @@ function Login() {
     setShowProfile(true)
   }
   return (
-    <section className='d-flex border bg-secondary text-white py-5 my-3  w-50 justify-content-center flex-column align-items-center'>
+    <section className='useContext-login d-flex border bg-secondary text-white py-5 my-3 w-75 justify-content-center flex-column align-items-center'>
       <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>

@@ -41,6 +41,9 @@ function NavBar() {
                          <Link to={"/reactHome"}>React Hooks Home</Link>
                     </NavDropdown.Item>
                 </NavDropdown>
+                <Nav.Link >
+                    <Link to={"/materialUi"}>Material UI</Link>
+                </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Container>

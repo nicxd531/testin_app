@@ -21,7 +21,12 @@ h3 {
   font-family: 'Lato', sans-serif;
   font-family: 'Roboto Serif', serif;
 }  
-
+.black{
+  color: black;
+}
+.white{
+  color: white;
+}
 .Home{
   background-image: url(/image/silvio-kundt-Fixg8KipOg8-unsplash.jpg);
   min-height: 100vh;
@@ -50,6 +55,7 @@ h3 {
 .faq-according-item .dot{
   top: -7px;
 }
+
 .dot {
   width: 15px;
   height: 15px;
@@ -120,17 +126,53 @@ h3 {
 }
 
 /*====================================redux=================================*/
-.redux-home,.react-home{
+.redux-home,.react-home,.material-ui{
   background-image: url(/image/silvio-kundt-Fixg8KipOg8-unsplash.jpg);
 }
-.redux-home>header,.react-home>header{
+.redux-home>header,.react-home>header,.material-ui>header{
   padding-top: 80px;
 }
-/*=========redux tuts 1==========*/
+/*=========material ui==========*/
+.search::placeholder{
+  font-size: "20px";
+}
+.sm-show{
+  visibility: visible;
+}
+.sm-hide{
+  visibility: hidden;
+}
+.search-sm{
+  visibility: visible;
+  position: absolute;
+  z-index: 1;
+  width: 45%;
+}
+#drawerM>*{
+position: absolute;
+height: 60vh;
+}
+#content-main{
+  z-index: 0;
+ width: 100%;
+ min-height: 60vh;
+ overflow: hidden;
+}
+/*=========break point==========*/
 
 @media (min-width: 992px) { 
   .faq-accordion{
     width: 50vw;
     
+  }
+  .useContext-login{
+    width: 50% !important;
+  }
+  .lg-hide{
+    visibility: hidden;
+    width: 0;
+  }
+  .lg-show{
+    visibility: visible;
   }
  }

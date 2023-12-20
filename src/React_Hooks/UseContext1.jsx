@@ -9,7 +9,7 @@ function UseContext1() {
   const [showProfile, setShowProfile]=useState(false)
   const [username, setUsername]=useState("")
   return (
-    <section className='d-flex  justify-content-center flex-column align-items-center'>
+    <section className='d-flex  justify-content-center flex-column align-items-center '>
       <LoginContext.Provider value={{username ,setUsername,setShowProfile}}>
         {showProfile ? <Profile/> : <Login/>}
       </LoginContext.Provider>
