@@ -9,8 +9,9 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+// variable for soring width
 const drawerWidth = 240;
-   
+//  variable for handling side bar width   
 const openedMixin = (theme) => ({
   width: drawerWidth,
   transition: theme.transitions.create('width', {
@@ -19,7 +20,7 @@ const openedMixin = (theme) => ({
   }),
   overflowX: 'hidden',
 });
-
+// width for handling width transition 
 const closedMixin = (theme) => ({
   transition: theme.transitions.create('width', {
     easing: theme.transitions.easing.sharp,
@@ -31,7 +32,7 @@ const closedMixin = (theme) => ({
     width: `calc(${theme.spacing(8)} + 1px)`,
   },
 });
-
+// drawerHeader function for styling component from material ui
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
@@ -42,7 +43,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 
-
+// drawer variable for styling drawer component 
 const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
     width: drawerWidth,
@@ -62,7 +63,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 
 function AsideBar({open}) {
-  
+  // theme variable for holding thr theme function 
 const theme = useTheme();
   return (
     <Drawer id="drawerM" className='drawer' variant="permanent" open={open} sx={{position:"relative",overflow:"visible", minHeight:"100px"}}>

@@ -7,10 +7,11 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 
 function SearchBar({clicked ,setClicked,searchSm,setSearchSm,currentTheme}) {
+  // state for thr the search bar to reveal the search bar or not and also variable for holding window width and validation for the window width
     const [searchBar, setSearchBar]=useState(false)
     const windowWidth = useRef(window.innerWidth);
     const valid = windowWidth.current < 500
-    console.log(searchSm)
+    // function for handling state change for the search bar(both function handle state change for the search bar)
     const handleClick =()=>{
         setClicked(false) ;
         setSearchSm(false);

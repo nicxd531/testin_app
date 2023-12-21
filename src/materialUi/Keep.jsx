@@ -1,12 +1,13 @@
 import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import AppBarM from './AppBarM';
 import AsideBar from './AsideBar';
 import MainContent from './MainContent';
-
+// main keep app component
 function Keep({currentTheme,setBgTheme}) {
+  // states for opening the side bar
   const [open, setOpen] = React.useState(false);
+  // function for handling  the open state
   const handleDrawerOpen = () => {
     setOpen(!open);
   };

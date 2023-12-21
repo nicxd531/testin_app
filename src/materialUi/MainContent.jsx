@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 function MainContent({currentTheme}) {
+  // the main content function for displaying contents
    
   return (                                            
     <Box id="content-main" component="section" className={`${currentTheme== "white"? "black":"white"}`} sx={{ bgcolor:`${currentTheme=="black"?"black":"white"}` ,flexGrow: 1, p: 3 ,position:"relative",height:"fit-content"}}>

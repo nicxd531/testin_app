@@ -17,8 +17,10 @@ import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import ModeNightIcon from '@mui/icons-material/ModeNight';
 
 function AppBarM({open,handleDrawerOpen,currentTheme,setBgTheme}) {
+  // states for handling if the search bar is clicked to show them
   const [clicked, setClicked] = useState(false)
   const [searchSm, setSearchSm]=useState(false)
+  // app bar variable used for handling the material ui tag 
   const AppBar = styled(MuiAppBar, {
     shouldForwardProp: (prop) => prop !== 'open',
   })(({ theme, open }) => ({
@@ -31,9 +33,9 @@ function AppBarM({open,handleDrawerOpen,currentTheme,setBgTheme}) {
   const handleTheme=(prop)=>{
     setBgTheme(prop)
   }
-  
+  // vriable for handling mode icon transition 
   const themeIcon =currentTheme=="white" ?<IconButton component="li"><ModeNightIcon sx={{ fontSize: 27}} onClick={()=>handleTheme("dark")}/></IconButton>:<IconButton component="li"><LightModeOutlinedIcon onClick={()=>handleTheme("light")} sx={{ fontSize: 27}}/></IconButton>
-console.log(currentTheme)
+
   return (
     <AppBar position="relative" open={open} >
           <Toolbar component="nav" className='d-flex justify-content-between'>

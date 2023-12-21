@@ -6,7 +6,9 @@ import Keep from './Keep'
 
 
 function MaterialHome() { 
+  // state management for the background theme
     const [bgTheme, setBgTheme]=useState("light")
+    // theme variable for ediiting the material ui internale theme using the the create theme function 
     const theme = createTheme({
         palette:{
             mode: bgTheme,
@@ -15,17 +17,18 @@ function MaterialHome() {
             }
         }
     })
+    // theme variable for handling the background colour switch case
     const themeC=(bgTheme)=>{
       switch(bgTheme){
         case "light":
           return "white"
-          break;
         case "dark":
           return "black"
         default:
           return "yellow"
       }
     }
+    // variable for holding the condtional statement 
      const currentTheme = themeC(bgTheme)
    
   return (
