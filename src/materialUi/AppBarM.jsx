@@ -34,7 +34,7 @@ function AppBarM({open,handleDrawerOpen,currentTheme,setBgTheme}) {
     setBgTheme(prop)
   }
   // vriable for handling mode icon transition 
-  const themeIcon =currentTheme=="white" ?<IconButton component="li"><ModeNightIcon sx={{ fontSize: 27}} onClick={()=>handleTheme("dark")}/></IconButton>:<IconButton component="li"><LightModeOutlinedIcon onClick={()=>handleTheme("light")} sx={{ fontSize: 27}}/></IconButton>
+  const themeIcon =currentTheme=="white" ?<IconButton component="li" onClick={()=>handleTheme("dark")}><ModeNightIcon sx={{ fontSize: 27}} /></IconButton>:<IconButton component="li" onClick={()=>handleTheme("light")}><LightModeOutlinedIcon  sx={{ fontSize: 27}}/></IconButton>
 
   return (
     <AppBar position="relative" open={open} >

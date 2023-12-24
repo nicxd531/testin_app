@@ -2,7 +2,9 @@ import { ThemeProvider,createTheme } from '@mui/material'
 import { orange } from '@mui/material/colors'
 import React, { useState } from 'react'
 import Keep from './Keep'
-
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography'
 
 
 function MaterialHome() { 
@@ -37,6 +39,15 @@ function MaterialHome() {
               <h1>HOME OF MATERIAL UI</h1>
               <h4>This section contains material ui examples in the creation of google keep</h4>
               <hr className='w-100 bg-warning mt-5'/>
+              <Stack direction="row" spacing={2}>
+                <Typography variant="h5">click these buttons for examples and documentations</Typography>
+                <Button color="info" variant="contained" href="https://mui.com/material-ui">
+                  documentation
+                </Button>
+                <Button color="success" variant="contained" href="https://bareynol.github.io/mui-theme-creator/">
+                  Examples
+                </Button>
+              </Stack>
             </header>
             <ThemeProvider theme={theme}>
               <Keep currentTheme={currentTheme} setBgTheme={setBgTheme}/>

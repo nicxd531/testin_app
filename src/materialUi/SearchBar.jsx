@@ -34,8 +34,8 @@ function SearchBar({clicked ,setClicked,searchSm,setSearchSm,currentTheme}) {
       />
       {
         clicked && 
-        <IconButton onClick={()=>setClicked(false)}>
-         <CloseIcon fontSize='large' sx={{color:`${currentTheme = "white"?"black":"white"}`}} onClick={handleClick}/>
+        <IconButton onClick={handleClick}>
+         <CloseIcon fontSize='large' sx={{color:`${currentTheme = "white"?"black":"white"}`}} />
         </IconButton>
       }
 

@@ -124,7 +124,10 @@ h3 {
     opacity: 0; /* Invisible */
   }
 }
-
+.footer{
+  z-index: 1200;
+  position: relative;
+}
 /*====================================redux=================================*/
 .redux-home,.react-home,.material-ui{
   background-image: url(/image/silvio-kundt-Fixg8KipOg8-unsplash.jpg);
