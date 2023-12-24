@@ -34,8 +34,8 @@ function MaterialHome() {
      const currentTheme = themeC(bgTheme)
    
   return (
-    <main className='vh-100 material-ui  pb-3'>
-            <header className='mb-2 px-3'>
+    <main className='vh-100 material-ui background  pb-3'>
+            <header className='mb-2 px-3 header-top-padding'>
               <h1>HOME OF MATERIAL UI</h1>
               <h4>This section contains material ui examples in the creation of google keep</h4>
               <hr className='w-100 bg-warning mt-5'/>

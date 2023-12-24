@@ -44,6 +44,9 @@ function NavBar() {
                 <Nav.Link >
                     <Link to={"/materialUi"}>Material UI</Link>
                 </Nav.Link>
+                <Nav.Link >
+                    <Link to={"/Api-Integration"}>Api-Integration</Link>
+                </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Container>

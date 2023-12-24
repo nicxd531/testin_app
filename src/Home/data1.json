@@ -50,4 +50,10 @@
         "body":"Webpack is a widely adopted open-source JavaScript module bundler designed to streamline the organization and deployment of various assets like JavaScript, CSS, and images in web applications. By structuring code into modules and bundling them together, Webpack simplifies dependency management and optimizes overall performance. Leveraging loaders, it processes different file types, transforming them into modules for inclusion in the application. The use of plugins extends functionality, allowing tasks such as code optimization and asset management. Code splitting, supported by Webpack, enables developers to divide code into smaller chunks, improving page load times. With features like a development server for live reloading and tree shaking to eliminate unused code, Webpack proves valuable for junior developers in enhancing front-end workflows and application performance.",
         "status":"completed"
     }
+    ,
+    {
+        "heading":"Api Integration",
+        "body":"API integration involves facilitating communication and data exchange between different software applications through standardized interfaces known as Application Programming Interfaces (APIs). These APIs define rules and methods, allowing applications to interact seamlessly. By enabling access to external services, data, or functionalities, API integration enhances the functionality of software applications, promoting efficiency, collaboration, and the creation of more powerful and versatile solutions. In essence, API integration is a vital aspect of modern software development that enables interoperability and the building of interconnected and feature-rich applications.",
+        "status":"in-progress"
+    }
 ]
