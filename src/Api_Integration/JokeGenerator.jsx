@@ -5,16 +5,22 @@ import { useState } from 'react'
 import axios from 'axios'
 
 function JokeGenerator() {
+  // states for checking if the joke is funny and fetch each joke
   const [jokeData,setJokeData]=useState("")
   const [funny,setFunny]=useState("")
+  // api key holder for the fetching of the joke 
   const apiKey ="C/tn/k9xvcdPHQuTsL9mQg==m9md9WxJ0p1fXKeH"
+  // links for the gifs for the jokes
   const booring ="https://media.giphy.com/media/tmQrpA8zpG4a16SSxm/giphy.gif"
   const yes ="https://media.giphy.com/media/Q7ozWVYCR0nyW2rvPW/giphy.gif"
-  
+  // handler for fetching jokes 
   const handelGenerattion =()=>{
+    // joke limit const and url for joke fetching 
     const limit = 1;
     const apiUrl = 'https://api.api-ninjas.com/v1/jokes';
+    // reset joke check
     setFunny("")
+    // axios method for fetching joke with methods ,url and header passed in 
     axios({
       method: 'get',
       url: `${apiUrl}?limit=${limit}`,
