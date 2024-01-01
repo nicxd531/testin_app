@@ -1,8 +1,7 @@
 import * as React from 'react';
-import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import { IconButton } from '@mui/material';
+import { Box, IconButton } from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../config/firebase-config';
@@ -34,7 +33,7 @@ console.error(err)
     handleClose()
 }
   return (
-    <div>
+    <Box sx={{display:{xs:"flex"}}}>
           <IconButton component="li"
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
@@ -57,6 +56,6 @@ console.error(err)
         <MenuItem onClick={handleClose}>My account</MenuItem>
         <MenuItem onClick={click}>Logout</MenuItem>
       </Menu>
-    </div>
+    </Box>
   );
 }

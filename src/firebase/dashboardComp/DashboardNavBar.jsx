@@ -36,7 +36,7 @@ function DashboardNavBar({open,handleDrawerOpen,currentTab,setBgTheme,bgTheme}) 
  // vriable for handling mode icon transition 
  const themeIcon =bgTheme=="light" ?<IconButton component="li" onClick={()=>handleTheme("dark")}><ModeNightIcon sx={{ fontSize: {xs:18,lg:27}}} /></IconButton>:<IconButton component="li" onClick={()=>handleTheme("light")}><LightModeOutlinedIcon  sx={{ fontSize: {xs:18,lg:27}}}/></IconButton>
   return (
-    <AppBar position="relative" open={open} >
+    <AppBar position="relative" open={open}  className='zi-1'>
           <Toolbar component="nav" className='d-flex justify-content-between'>
             <Box  className="d-flex align-items-center">
             <IconButton

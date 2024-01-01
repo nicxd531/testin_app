@@ -39,7 +39,7 @@ h3 {
 }
 /*========================= Home css ==========================*/
 .navBar{
-  z-index: 1201;
+  z-index: 1202;
 }
 .Home{
   background-image: url(/image/silvio-kundt-Fixg8KipOg8-unsplash.jpg);
@@ -112,7 +112,7 @@ h3 {
   text-align: justify;
 }
 .zi-1{
-  z-index: 1;
+  z-index: 1201;
 }
 /* Animation for infinite rotation */
 @keyframes rotate {
@@ -194,10 +194,13 @@ height: 60vh;
 }
 #drawerM2>*{
   position: absolute;
-  height:700px;
+  top:0;
+  
   }
   #drawerM2{
-    height: 100%;
+
+    position: absolute;
+   
   }
 /*=========break point==========*/
 
