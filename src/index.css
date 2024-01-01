@@ -38,6 +38,9 @@ h3 {
   color: white;
 }
 /*========================= Home css ==========================*/
+.navBar{
+  z-index: 1201;
+}
 .Home{
   background-image: url(/image/silvio-kundt-Fixg8KipOg8-unsplash.jpg);
   min-height: 100vh;
@@ -139,6 +142,8 @@ h3 {
   z-index: 1200;
   position: relative;
   height: fit-content;
+
+  
 }
 /*====================================redux=================================*/
 
@@ -169,6 +174,31 @@ height: 60vh;
  min-height: 60vh;
  overflow: hidden;
 }
+/*================ firebase =================*/
+.firebase{
+  position: relative;
+
+}
+.firebase-homepage{
+  background: url(/image/sojourn_tracer_hd_overwatch_2-1366x768.jpg);
+  background-size: repeat;
+  position:relative;
+  background-size: cover;
+}
+.expense-tracker-home{
+  background: url(/image/kiriko_cool_art_hd_overwatch_2-1366x768.jpg);
+  background-size: cover;
+}
+.movies{
+  background: url(/image/kiriko_cool_art_hd_overwatch_2-1366x768.jpg);
+}
+#drawerM2>*{
+  position: absolute;
+  height:700px;
+  }
+  #drawerM2{
+    height: 100%;
+  }
 /*=========break point==========*/
 
 @media (min-width: 992px) { 

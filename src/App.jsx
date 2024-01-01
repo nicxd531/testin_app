@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './Home/Footer'
 import MaterialHome from './materialUi/MaterialHome'
 import ApiIntegration from './Api_Integration/ApiIntegration'
+import FirebaseHome from './firebase/FirebaseHome'
 
 function App() {
   // this component only contains router for the whole app
@@ -24,9 +25,10 @@ function App() {
           <Route path='/reactHome/*' element={<ReactHome/>} />
           <Route path='/materialUi/*' element={<MaterialHome/>} />
           <Route path='/Api-Integration/*' element={<ApiIntegration/>} />
+          <Route path='/firebase/*' element={<FirebaseHome/>} />
         </Routes>
-        <Footer/>
       </Router>
+        <Footer/>
     </div>
   )
 }

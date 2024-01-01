@@ -12,7 +12,7 @@ function Explation({data,usage}) {
         <div className='mt-5 container'>
             <h1>Code Explanation</h1>
             <div className=' mt-5 row row-cols-lg-3'>
-               {data.map((data)=>{
+               {data?.map((data)=>{
                 return <ExplanationCard  data={data}/>
                }) }
             </div>

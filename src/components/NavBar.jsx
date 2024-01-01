@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary position-fixed w-100 zi-1">
+    <Navbar expand="lg" className="bg-body-tertiary position-fixed w-100 navBar">
         <Container>
             <Navbar.Brand className='w-25 fw-bold fs-2' href="/">Testing App</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -46,6 +46,9 @@ function NavBar() {
                 </Nav.Link>
                 <Nav.Link >
                     <Link to={"/Api-Integration"}>Api-Integration</Link>
+                </Nav.Link>
+                <Nav.Link >
+                    <Link to={"/firebase"}>Firbaase</Link>
                 </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
