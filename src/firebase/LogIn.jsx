@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React,{ useState} from 'react'
 import IconButton from '@mui/material/IconButton';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
@@ -15,30 +15,33 @@ import { useGetUserInfo } from '../hooks/useGetUserInfo';
 
 
 function LogIn() {
+  // this is the componnent for logging into the app
+  // states  for handling show password 
     const [showPassword, setShowPassword] =useState(false);
+    // distructed custom hook for getting name and profile photo
+      const {isAuth}=useGetUserInfo()
+    // use navigate const for redirection 
     const navigate = useNavigate();
-    const {name,profilePhoto}=useGetUserInfo
-
-    
+    // functions for handling mouse down and showing password 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
-
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
-const signInWithGoogle= async()=>{
+
+  const signInWithGoogle= async()=>{
+    // function for handling sign in with popup
    const results = await signInWithPopup(auth, provider)
    const authInfo ={
     userID: results?.user?.uid,
     name : results?.user?.displayName,
     profilePhoto:results?.user?.photoURL,
-    isAuth: "true"
+    isAuth: true
    }
    localStorage.setItem("auth",JSON.stringify(authInfo))
    navigate("/firebase/Dashboard-firebase")
 }
-
-if (name || profilePhoto){
-  console.log("hey it works")
+// this is used to check if the user is loggedin to navigate to dashboard
+if (isAuth){
   return<Navigate to={"/firebase/Dashboard-firebase"}/>
 }
 
@@ -67,7 +70,6 @@ if (name || profilePhoto){
        
     </FormControl>
     <FormControl sx={{ m: 1, width: '80%' }} variant="outlined">
-
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"

@@ -6,6 +6,7 @@ import LogIn from './Login';
 
 
 function homepage() {
+  // this is the hompage component fo the firebase app
   return (
     <Box className="firebase-homepage w-100 d-flex flex-column justify-content-center align-items-center">
         <Routes>

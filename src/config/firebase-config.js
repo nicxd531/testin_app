@@ -18,7 +18,7 @@ const firebaseConfig = {
   measurementId: "G-3HQ4H48QDB"
 };
 
-// Initialize Firebase
+// Initialize Firebase,geth firebase authentication,provide authentication throught google and get access to the store through get firestore functions
 const app = initializeApp(firebaseConfig);
 export const  auth = getAuth(app)
 export const  provider = new GoogleAuthProvider()

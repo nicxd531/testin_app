@@ -13,7 +13,8 @@ import { Box } from '@mui/material';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import ModeNightIcon from '@mui/icons-material/ModeNight';
 import { useGetUserInfo } from '../../hooks/useGetUserInfo';
-import ProfilePhoto from './profilePhoto';
+import ProfilePhoto from './ProfilePhoto';
+
 
 
 
@@ -30,6 +31,7 @@ function DashboardNavBar({open,handleDrawerOpen,currentTab,setBgTheme,bgTheme}) 
       duration: theme.transitions.duration.leavingScreen,
     })
   }));
+  // handle theme function
   const handleTheme=(prop)=>{
     setBgTheme(prop)
   }

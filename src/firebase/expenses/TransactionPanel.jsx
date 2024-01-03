@@ -12,10 +12,13 @@ import FormLabel from '@mui/material/FormLabel';
 
 
 function TransactionPanel({addTransaction}) {
+    // this component is used to add new transactions
+    // states for handling inputed data 
     const [title, setTitle]=useState("");
     const [description, setDescription]=useState("");
     const [transactionAmount, setTransactionAmount]=useState(0);
     const [transactionType, setTransactionType]=useState("Expense");
+    // function for handling submition of new data 
     const onSubmit = (e)=>{
         e.preventDefault()
         addTransaction({title:title,description:description,transactionAmount:transactionAmount,transactionType:transactionType})
@@ -23,6 +26,7 @@ function TransactionPanel({addTransaction}) {
         setTransactionAmount(0)
         setTitle("")
     }
+    // funstion for setting transaction type state
     const handleChange = (event) => {
         setTransactionType(event.target.value);
       };

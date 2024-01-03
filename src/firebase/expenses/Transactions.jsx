@@ -9,19 +9,18 @@ import Avatar from '@mui/material/Avatar';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 
-
-
 function Transactions({transactions}) {
-  const [page, setPage] = React.useState(1);
+  // this component shows the list of transactions on the account 
+  // states for current page 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5; // Set the number of items per page
-  // Your data array (replace this with your actual data)
+  // const forlisting required pages 
   const totalPages = Math.ceil(transactions.length / itemsPerPage);
+  // data slicing constant for items on each page
   const currentData = transactions.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
-
   
   return (
     <Box>
@@ -30,7 +29,6 @@ function Transactions({transactions}) {
           { currentData?.map((data)=>{
             const {title,description,transactionType,transactionAmount,id}= data
             const bg =transactionType == "Income"
-     
             return(
               <Box key={id}>
               <ListItem component="div" alignItems="flex-start">
@@ -52,7 +50,6 @@ function Transactions({transactions}) {
                       </Typography>
                       $ {transactionAmount}
                       <Typography  component="span" sx={{display:"block"}}>
-
                       {description}
                       </Typography>
                     </React.Fragment>

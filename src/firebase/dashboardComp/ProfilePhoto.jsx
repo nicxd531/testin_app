@@ -10,19 +10,24 @@ import {  useNavigate } from 'react-router-dom';
 
 
 export default function ProfilePhoto() {
+  // useState hook for holding anchor 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  // function for opening mini menu
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+  // function for closing mini menu
   const handleClose = () => {
     setAnchorEl(null);
   };
+  // signout function 
   const signUserOut =async()=>{
     await signOut
   }
   const navigate =useNavigate()
-const click =async ()=>{
+  // handle click function for signout 
+  const click =async ()=>{
     try{
     await signUserOut(auth)
     navigate("/firebase/login")

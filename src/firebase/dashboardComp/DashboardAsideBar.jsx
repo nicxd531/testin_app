@@ -64,19 +64,23 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 const nav =[
     {
         iconName:'Expenses',
-        iconLink:'/firebase/Dashboard-firebase'
+        iconLink:'/firebase/Dashboard-firebase',
+        heading:"Expense Tracker"
     },
     {
         iconName:'Movies',
-        iconLink:'/firebase/Dashboard-firebase/movies'
+        iconLink:'/firebase/Dashboard-firebase/movies',
+        heading:"Movie wachlist"
     },{
       iconName:'calculator',
-      iconLink:'/firebase/Dashboard-firebase/calculator'
+      iconLink:'/firebase/Dashboard-firebase/calculator',
+      heading:"FX Calculator"
   }
 ]
 
-function DashboardAsideBar({open}) {
-  // theme variable for holding thr theme function 
+function DashboardAsideBar({open,setCurrentTab}) {
+  // this component is used for navigation 
+  // theme variable for holding the theme function 
 const theme = useTheme();
   return (
     <Drawer id="drawerM2" className='drawer' variant="permanent" open={open} sx={{position:"relative",overflow:"visible",height:{xs:"94%",lg:"93.5%"}}}>
@@ -91,7 +95,7 @@ const theme = useTheme();
                   icon = <CalculateIcon/>
                 }
                 return (
-                    <ListItem key={text.iconName} disablePadding sx={{ display: 'block' }}>
+                    <ListItem key={text.iconName} disablePadding sx={{ display: 'block' }} onClick={()=>setCurrentTab(text.heading)}>
                          <Link to={text.iconLink}>
                             <ListItemButton
                                     sx={{

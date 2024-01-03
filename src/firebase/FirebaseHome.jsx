@@ -7,7 +7,7 @@ import { ThemeProvider,createTheme } from '@mui/material'
 import { orange } from '@mui/material/colors'
 
 function FirebaseHome() {
-
+    // this is the main firebase home component
      // state management for the background theme
      const [bgTheme, setBgTheme]=useState("dark")
      // theme variable for ediiting the material ui internale theme using the the create theme function 
@@ -33,7 +33,6 @@ function FirebaseHome() {
       // variable for holding the condtional statement 
        const currentTheme = themeC(bgTheme)
       
-       
   return (
     <main className='header background  firebase'>
         <header className='mb-2 px-3 header-top-padding'>
