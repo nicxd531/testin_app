@@ -14,7 +14,7 @@ function LotSizeCalculator() {
   const  [pair,setPair]=useState("")
   const  [result ,setResult]=useState("")
   return (
-    <Paper className='p-4' sx={{minWidth:"280px"}}>
+    <Paper className='p-4' sx={{minWidth:"280px",flexGrow:"1",ml:6,py:9}}>
         <Typography variant='h4' className='p-1 d-flex W-100 text-center align-items-center justify-content-center fw-bold'> Lot Size Calculator</Typography>
         <DataInput pips={pips} pair={pair} risk={risk} setPair={setPair} setRisk={setRisk} setPips={setPips} result={result} setResult={setResult}/>
         <Divider>

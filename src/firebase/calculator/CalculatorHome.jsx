@@ -8,7 +8,7 @@ import LotSizeCalculator from './LotSizeCalculator';
 function CalculatorHome() {
   // main calculator app ,it holds other components 
   return (
-    <Box className='h-75 w-100 calculator-home'>
+    <Box className='h-75 w-100 calculator-home '>
       <Tabs
         defaultActiveKey="lot size calculator"
         id="uncontrolled-tab-example"
@@ -17,7 +17,7 @@ function CalculatorHome() {
         <Tab eventKey="main-home" title="Main">
           main home
         </Tab>
-        <Tab eventKey="lot size calculator" title="lot size calculator">
+        <Tab className='d-flex align-items-center justify-content-center pt-5' eventKey="lot size calculator" title="lot size calculator">
           <LotSizeCalculator/>
         </Tab>
         <Tab eventKey="profile" title="Partial Profits">
