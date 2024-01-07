@@ -5,7 +5,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import ReplayIcon from '@mui/icons-material/Replay';
 import AppsIcon from '@mui/icons-material/Apps';
 import Avatar from '@mui/material/Avatar';
@@ -14,9 +13,6 @@ import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import ModeNightIcon from '@mui/icons-material/ModeNight';
 import { useGetUserInfo } from '../../hooks/useGetUserInfo';
 import ProfilePhoto from './ProfilePhoto';
-
-
-
 
 function DashboardNavBar({open,handleDrawerOpen,currentTab,setBgTheme,bgTheme}) {
   const {profilePhoto}=useGetUserInfo()

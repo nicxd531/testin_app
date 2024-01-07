@@ -5,8 +5,10 @@ import Explation from "../components/Explation"
 import DashboardFirebase from './DashboardFirebase'
 import { ThemeProvider,createTheme } from '@mui/material'
 import { orange } from '@mui/material/colors'
+import data from "../firebase/data1.json"
 
 function FirebaseHome() {
+  const usage ="Firebase is a comprehensive mobile and web application development platform provided by Google that offers a wide array of tools and services to simplify the development process. Central to Firebase is its real-time NoSQL database, facilitating effortless data synchronization across clients. Additionally, Firebase provides user authentication, cloud functions for serverless computing, hosting for web applications, and various other services such as Cloud Firestore, Firebase Cloud Messaging (FCM), and Firebase Authentication. Its ease of integration, scalability, and the ability to handle key aspects of app development, including authentication, data storage, and serverless computing, make Firebase a popular choice for developers seeking a robust and user-friendly backend solution."
     // this is the main firebase home component
      // state management for the background theme
      const [bgTheme, setBgTheme]=useState("dark")
@@ -46,7 +48,7 @@ function FirebaseHome() {
                 <Route path='/Dashboard-firebase/*' element={<DashboardFirebase setBgTheme={setBgTheme} bgTheme={bgTheme}/>}/>
             </Routes> 
         </ThemeProvider>
-        <Explation/>
+        <Explation usage={usage} data={data}/>
     </main>
   )
 }

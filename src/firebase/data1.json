@@ -1,0 +1,17 @@
+[   
+    {
+        "title":"Firebase config ",
+        "image":"/image/firebase config.png",
+        "description":"Firebase Config generally refers to the configuration settings associated with a Firebase project. In the context of application development, it involves initializing the Firebase SDK with parameters like API keys, project IDs, and other service-specific details to connect the application with Firebase services. Additionally, in Firebase CLI usage, the 'Firebase Config' often refers to settings stored in the firebase.json file, specifying deployment configurations for Firebase Hosting, Cloud Functions, Firestore, and other project-related details, facilitating streamlined project management and deployment from the command line."
+    },
+    {
+        "title":"Config page",
+        "image":"/image/config page.png",
+        "description":"In Firebase Firestore configuration, initializing the app involves setting up the Firebase SDK with credentials, such as API keys and project IDs, to establish a connection between the application and Firestore. Getting Firestore represents acquiring a reference to the Firestore database, facilitating data manipulation and retrieval. Incorporating GoogleAuth provider signifies configuring authentication with Firebase using Google as the identity provider, allowing users to sign in with their Google accounts. Integrating authentication with Firestore involves associating user authentication information with Firestore, enabling secure access control and personalized data storage based on the user's identity. This seamless combination of initializing the app, obtaining Firestore, configuring GoogleAuth provider, and integrating authentication with Firestore forms a comprehensive setup for building robust and secure Firebase applications."
+    },
+    {
+        "title":"Collection,SignInWithPopUp,AddDoc",
+        "image":"/image/collection.png",
+        "description":"In Firebase, the collection, add document, and sign-in with a popup functions pertain to Firestore (Firebase's NoSQL database), Firestore data manipulation, and user authentication. The 'collection' in Firestore refers to a group of documents with similar data, and the 'add document' function is used to insert new data into a collection. For instance, you might create a collection called 'users' and use the 'add document' function to add user details.On the other hand, the 'sign-in with popup' function is associated with Firebase Authentication. When implemented, it triggers a popup that allows users to sign in to your application using various authentication providers, such as Google, using OAuth. This is achieved through Firebase Authentication providers like GoogleAuthProvider. After signing in, you can associate user authentication details with Firestore, linking their identity to specific data. For example, you might store user-specific information in a Firestore document within the 'users' collection. These functions collectively enable the creation, manipulation, and retrieval of data in Firestore while securing user authentication through Firebase Authentication."
+    }
+]

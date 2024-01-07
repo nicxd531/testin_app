@@ -56,4 +56,10 @@
         "body":"API integration involves facilitating communication and data exchange between different software applications through standardized interfaces known as Application Programming Interfaces (APIs). These APIs define rules and methods, allowing applications to interact seamlessly. By enabling access to external services, data, or functionalities, API integration enhances the functionality of software applications, promoting efficiency, collaboration, and the creation of more powerful and versatile solutions. In essence, API integration is a vital aspect of modern software development that enables interoperability and the building of interconnected and feature-rich applications.",
         "status":"in-progress"
     }
+    ,
+    {
+        "heading":"Firebase",
+        "body":"Firebase is a comprehensive mobile and web application development platform provided by Google that offers a wide array of tools and services to simplify the development process. Central to Firebase is its real-time NoSQL database, facilitating effortless data synchronization across clients. Additionally, Firebase provides user authentication, cloud functions for serverless computing, hosting for web applications, and various other services such as Cloud Firestore, Firebase Cloud Messaging (FCM), and Firebase Authentication. Its ease of integration, scalability, and the ability to handle key aspects of app development, including authentication, data storage, and serverless computing, make Firebase a popular choice for developers seeking a robust and user-friendly backend solution.",
+        "status":"completed"
+    }
 ]

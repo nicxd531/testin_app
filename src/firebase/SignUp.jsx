@@ -24,17 +24,6 @@ function SignUp() {
     const [Password, setPassword] =useState("");
     const [confirmPassword, setComfirmPassword] =useState("");
     const [isDisabled, setIsDisabled] =useState(true);
-
-    // const check=()=>{
-    //   if (Password=== confirmPassword){
-    //     setIsDisabled (false)
-    //     console.log("it false")
-    //   }else{
-    //     setIsDisabled(true)
-    //     console.log("it true")
-    //   }
-    // }
-    
   
     const navigate = useNavigate();
 // distructed custom hook for getting name and profile photo

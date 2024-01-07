@@ -6,14 +6,15 @@ import { useGetTransactions } from '../../hooks/useGetTransactions';
 import TransactionPanel from './TransactionPanel';
 import WelcomeDashboard from './WelcomeDashboard';
 
+
 function ExpenseTrackerHome() {
   // this component is the main home component for expenses
   // custom hook for gettinging and adding transactions 
   const {transactions,transactionTotal}=useGetTransactions();
   const {addTransaction} = useAddTransaction();
   return (
-    <Box  className="expense-tracker-home" sx={{flexGrow: 1, p: 3 ,position:"relative",height:"fit-content"}}>
-        <Paper sx={{opacity:"0.8",p:3 ,ml:{xs:5, width:{xs:"100%"}}}}>
+    <Box  className="expense-tracker-home d-flex justify-content-center align-items-center" sx={{flexGrow: 1,py:5 ,position:"relative",height:"fit-content"}}>
+        <Paper sx={{opacity:"0.8",p:5,ml:{xs:7}, px:{lg:9}}}>
             <WelcomeDashboard transactionTotal={transactionTotal}/>
             <Divider/>
             <TransactionPanel addTransaction={addTransaction}/>
