@@ -50,6 +50,9 @@ function NavBar() {
                     <Nav.Link as="div" >
                         <Link to={"/firebase"}>Firbaase</Link>
                     </Nav.Link>
+                    <Nav.Link as="div" >
+                        <Link to={"/socket"}>Socket.io</Link>
+                    </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Container>

@@ -10,6 +10,7 @@ import Footer from './Home/Footer'
 import MaterialHome from './materialUi/MaterialHome'
 import ApiIntegration from './Api_Integration/ApiIntegration'
 import FirebaseHome from './firebase/FirebaseHome'
+import SocketHome from './Socket.io/SocketHome'
 
 function App() {
   // this component only contains router for the whole app
@@ -26,6 +27,7 @@ function App() {
           <Route path='/materialUi/*' element={<MaterialHome/>} />
           <Route path='/Api-Integration/*' element={<ApiIntegration/>} />
           <Route path='/firebase/*' element={<FirebaseHome/>} />
+          <Route path='/socket' element={<SocketHome/>} />
         </Routes>
       </Router>
         <Footer/>

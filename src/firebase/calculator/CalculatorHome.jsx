@@ -1,14 +1,17 @@
-import { Box, Paper } from '@mui/material'
+import { Box, Divider, Paper,Typography } from '@mui/material'
 import React from 'react'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-import DataInput from './lot size/DataInput';
 import LotSizeCalculator from './LotSizeCalculator';
 
 function CalculatorHome() {
   // main calculator app ,it holds other components 
   return (
     <Box className='h-75 w-100 calculator-home '>
+      <Box sx={{mb:3}}>
+        <Typography className='fw-bold' variant='h4'>FX Calculator</Typography>
+      </Box>
+      
       <Tabs
         defaultActiveKey="lot size calculator"
         id="uncontrolled-tab-example"

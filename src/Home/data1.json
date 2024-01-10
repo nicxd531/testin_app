@@ -61,5 +61,10 @@
         "heading":"Firebase",
         "body":"Firebase is a comprehensive mobile and web application development platform provided by Google that offers a wide array of tools and services to simplify the development process. Central to Firebase is its real-time NoSQL database, facilitating effortless data synchronization across clients. Additionally, Firebase provides user authentication, cloud functions for serverless computing, hosting for web applications, and various other services such as Cloud Firestore, Firebase Cloud Messaging (FCM), and Firebase Authentication. Its ease of integration, scalability, and the ability to handle key aspects of app development, including authentication, data storage, and serverless computing, make Firebase a popular choice for developers seeking a robust and user-friendly backend solution.",
         "status":"completed"
+    },
+    {
+        "heading":"Socket .io",
+        "body":"Socket.io is a real-time web application framework built on top of the WebSocket protocol, providing a seamless and efficient bidirectional communication channel between clients and servers. Developed for both web and mobile applications, Socket.io simplifies the implementation of real-time features by offering a versatile and easy-to-use API. Its key innovation lies in its ability to gracefully degrade to alternative transport mechanisms, such as long polling or server-sent events, when WebSockets are not supported or face connectivity issues. With features like automatic reconnection, event-based communication, and room functionality, Socket.io has become a popular choice for developers seeking to incorporate real-time capabilities, making it well-suited for applications like chat platforms, collaborative tools, and live updates in a variety of domains.",
+        "status":"completed"
     }
 ]
