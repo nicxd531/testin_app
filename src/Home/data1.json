@@ -66,5 +66,10 @@
         "heading":"Socket .io",
         "body":"Socket.io is a real-time web application framework built on top of the WebSocket protocol, providing a seamless and efficient bidirectional communication channel between clients and servers. Developed for both web and mobile applications, Socket.io simplifies the implementation of real-time features by offering a versatile and easy-to-use API. Its key innovation lies in its ability to gracefully degrade to alternative transport mechanisms, such as long polling or server-sent events, when WebSockets are not supported or face connectivity issues. With features like automatic reconnection, event-based communication, and room functionality, Socket.io has become a popular choice for developers seeking to incorporate real-time capabilities, making it well-suited for applications like chat platforms, collaborative tools, and live updates in a variety of domains.",
         "status":"completed"
+    },
+    {
+        "heading":"Cart js",
+        "body":"Chart.js is a versatile and intuitive JavaScript library that simplifies the creation of interactive and visually appealing charts within web applications. With a focus on ease of use and flexibility, Chart.js allows developers to effortlessly generate a variety of chart types, including line charts, bar charts, radar charts, pie charts, and more, using HTML5 canvas for rendering. Offering a straightforward setup and configuration process, it enables customization of charts with a plethora of styling options and interactivity features, such as tooltips, animations, and responsiveness. Whether for data visualization, analytics, or presenting information in a dynamic manner, Chart.js empowers developers to implement engaging and effective charts with minimal effort, making it a popular choice in the web development community.",
+        "status":"completed"
     }
 ]

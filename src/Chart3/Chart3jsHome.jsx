@@ -12,6 +12,7 @@ import DoughnutChart from "./DoughnutChart"
 
 
 function Chart3jsHome() {
+    const usage ="Chart.js is a versatile and intuitive JavaScript library that simplifies the creation of interactive and visually appealing charts within web applications. With a focus on ease of use and flexibility, Chart.js allows developers to effortlessly generate a variety of chart types, including line charts, bar charts, radar charts, pie charts, and more, using HTML5 canvas for rendering. Offering a straightforward setup and configuration process, it enables customization of charts with a plethora of styling options and interactivity features, such as tooltips, animations, and responsiveness. Whether for data visualization, analytics, or presenting information in a dynamic manner, Chart.js empowers developers to implement engaging and effective charts with minimal effort, making it a popular choice in the web development community."
     // main chart component 
     const header ="HOME OF CHART 3 JS"
     const description ="this is a chart library used to display charts in react "
@@ -69,7 +70,7 @@ function Chart3jsHome() {
                 </Tab>
             </Tabs>
         </Box>
-        <Explation/>
+        <Explation usage={usage} />
 
     </main>
   )
