@@ -48,11 +48,14 @@ function NavBar() {
                         <Link to={"/Api-Integration"}>Api-Integration</Link>
                     </Nav.Link>
                     <Nav.Link as="div" >
-                        <Link to={"/firebase"}>Firbaase</Link>
+                        <Link to={"/firebase"}>Firebase</Link>
                     </Nav.Link>
-                    <Nav.Link as="div" >
+                   <Nav.Link as="div" >
                         <Link to={"/socket"}>Socket.io</Link>
-                    </Nav.Link>
+                    </Nav.Link> 
+                   <Nav.Link as="div" >
+                        <Link to={"/chart3"}>Chart 3 Js</Link>
+                    </Nav.Link> 
                 </Nav>
             </Navbar.Collapse>
         </Container>

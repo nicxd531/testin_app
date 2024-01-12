@@ -6,8 +6,12 @@ import FactGenerator from './FactGenerator'
 import AgeGenerator from './AgeGenerator'
 import ExcuseGenerator from './ExcuseGenerator'
 import Explation from '../components/Explation'
+import IntroHeader from '../components/IntroHeader'
 
 function ApiIntegration() {
+  const header = "HOME OF API INTEGRATION"
+  const description = "This section contains API INTEGRATION in the below genenerator apps"
+
   const usage = `API integration involves facilitating communication and data exchange between different software applications through standardized interfaces known as Application Programming Interfaces (APIs). These APIs define rules and methods, allowing applications to interact seamlessly. By enabling access to external services, data, or functionalities, API integration enhances the functionality of software applications, promoting efficiency, collaboration, and the creation of more powerful and versatile solutions. In essence, API integration is a vital aspect of modern software development that enables interoperability and the building of interconnected and feature-rich applications.`
  const data =[
   {
@@ -24,11 +28,7 @@ function ApiIntegration() {
  ]
   return (
     <main className='background '>
-        <header className='mb-2 px-3 header-top-padding'>
-              <h1>HOME OF API INTEGRATION</h1>
-              <h4>This section contains API INTEGRATION in the below genenerator apps</h4>
-              <hr className='w-100 bg-warning mt-5'/>
-        </header>
+       <IntroHeader header={header} description={description}/>
         <ApINav/>
         <Routes>
             <Route path='/' element={<JokeGenerator/>}/>

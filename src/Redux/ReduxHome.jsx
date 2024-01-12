@@ -11,6 +11,7 @@ import Explation from '../components/Explation';
 import data1 from "./features/data1.json"
 import RedeuxTut2 from './RedeuxTut2';
 import usersTut2Reducer from "./features/UserReducer"
+import Introheader from "../components/IntroHeader"
 
 
 const store = configureStore({
@@ -24,6 +25,8 @@ const store = configureStore({
 })
 
 function ReduxHome() {
+  const header ="HOME OF REDUX"
+  const description ="This section contains redux examples and explations of diffrent redux concepts"
   // this Component contains the store method that holds every reducer data that is used through out the app
   // this component also contains the tab bootstrap method used to switch between the twoo redux sections
   // this component also contains the provider tag that is used to pasa the store methods & data to eveery component wrapped around it  
@@ -32,10 +35,7 @@ function ReduxHome() {
   return (
     <Provider store={store}>
       <main className='redux-home background p-3 pb-5 '>
-        <header className='mb-3 header-top-padding'>
-          <h1>HOME OF REDUX</h1>
-          <h4>This section contains redux examples and explations of diffrent redux concepts</h4>
-        </header>
+        <Introheader header={header} description={description}/>
         <section>
           <Tabs
           justify

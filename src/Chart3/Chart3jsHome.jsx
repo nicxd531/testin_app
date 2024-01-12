@@ -1,0 +1,78 @@
+import React, { useState } from 'react'
+import IntroHeader from '../components/IntroHeader'
+import { Box ,Paper} from '@mui/material'
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import BarChat from './BarChat'
+import {userData} from "./Data"
+import Explation from "../components/Explation"
+import LineChart from "./Linechart"
+import PieChart from './PieChart';
+import DoughnutChart from "./DoughnutChart"
+
+
+function Chart3jsHome() {
+    // main chart component 
+    const header ="HOME OF CHART 3 JS"
+    const description ="this is a chart library used to display charts in react "
+    // state for holding data passed to the chart component
+    const [userData2 ,setUserData2]=useState({
+        labels: userData.map((data)=>data.year),
+        datasets:[{
+            label:"users Gained",
+            data: userData.map((data)=>data.userGain),
+            backgroundColor:[ 
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(255, 159, 64,0.6)',
+            'rgba(255, 205, 86,0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            ]
+        }]
+    })
+  return (
+    <main className="background header-top-padding ">
+        <IntroHeader description={description} header={header}/>
+        <Box>
+            <Tabs
+                defaultActiveKey="Chat 1"
+                id="uncontrolled-tab-example"
+                className="mb-3"
+            >
+                <Tab eventKey="Chat 1" title="Bar Chart">
+                    <Box sx={{mb:4}} className="d-flex justify-content-center align-items-center mx-4 w-100">
+                        <Paper sx={{height:"500px",p:2}}className="w-75 d-flex justify-content-center align-items-center">
+                            <BarChat chartData={userData2}/>
+                        </Paper>
+                    </Box>
+                </Tab>
+                <Tab eventKey="chat 2" title="Line Chart">
+                     <Box sx={{mb:4}} className="d-flex justify-content-center align-items-center mx-4">
+                        <Paper className="w-75 p-4">
+                            <LineChart chartData={userData2}/>
+                        </Paper>
+                    </Box>
+                </Tab>
+                <Tab eventKey="Chat 3" title="Pie Chart" >
+                    <Box sx={{mb:4}} className="d-flex justify-content-center align-items-center mx-4">
+                        <Paper sx={{height:"500px"}} className="w-50 d-flex justify-content-center align-items-center">
+                            <PieChart chartData={userData2}/>
+                        </Paper>
+                    </Box>
+                </Tab>
+                <Tab eventKey="Chat 4" title="Doughnut Chart" >
+                <Box sx={{mb:4}} className="d-flex justify-content-center align-items-center mx-4">
+                        <Paper sx={{height:"500px"}} className="w-50 d-flex justify-content-center align-items-center ">
+                            <DoughnutChart chartData={userData2}/>
+                        </Paper>
+                    </Box>
+                </Tab>
+            </Tabs>
+        </Box>
+        <Explation/>
+
+    </main>
+  )
+}
+
+export default Chart3jsHome
