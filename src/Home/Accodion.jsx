@@ -3,6 +3,8 @@ import Accordion from 'react-bootstrap/Accordion';
 import DotIndicator from '../components/DotIndicator';
 
 function Accodion({data, index}) {
+  // main accordion component 
+  // distructuring of data 
     const {heading, body,status} = data
 
   return (

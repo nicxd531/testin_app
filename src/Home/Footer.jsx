@@ -2,6 +2,7 @@ import React from 'react'
 
 
 function Footer() {
+  // main footer component
   return (
     <footer className='p-3 d-flex footer flex-row justify-content-center align-items-center'>
         <h2 className='p-2 flex-grow-1 text-center fs-6'>

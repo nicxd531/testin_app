@@ -4,7 +4,8 @@ import data1 from "./data1.json"
 import Accodion from './Accodion';
 
 function Faq() {
-    
+  // main faq component 
+  // const for holfing accordion 
     const faq = data1.map((data,index )=>{
         return (<Accodion key={data.heading} data={data} index={index}/>)
     })
