@@ -5,10 +5,12 @@ export const userSlice = createSlice({
     name: "user",
     initialState:initialStateValue,
     reducers: {
+        // login method
         login: (state, action) => {
             
             state.value = action.payload;
         },
+        // logout method
         logout:(state)=>{
             state.value = initialStateValue
         }

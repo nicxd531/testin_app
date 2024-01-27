@@ -6,9 +6,11 @@ const userSliceTut2 = createSlice({
     name:"userTut2",
     initialState:data2,
     reducers:{
+        // add user method
         addUser: (state, action)=>{
            state.push(action.payload)
         },
+        // update user method
         updateUser:(state,action)=>{
             const {id,name,email}=action.payload
             const nState =state
@@ -19,6 +21,7 @@ const userSliceTut2 = createSlice({
             }
            
         },
+        // delete user method
         deleteUser: (state, action) => {
             const { id } = action.payload;
             const nState = state

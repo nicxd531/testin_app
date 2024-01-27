@@ -6,6 +6,7 @@ export const userStatusSlice  = createSlice({
     name: "userStatus",
     initialState:{value:initialStateValue},
     reducers: {
+        // set user status method
         userStatus: (state, action) => {
             state.value = action.payload;
         }
