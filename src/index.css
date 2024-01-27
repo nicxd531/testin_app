@@ -24,6 +24,7 @@ h3 {
 /*==============generic css ===========================*/
 .background{
   background-image: url(/image/silvio-kundt-Fixg8KipOg8-unsplash.jpg);
+  overflow: hidden;
 }
 .header-top-padding{
   padding-top: 80px;
@@ -174,6 +175,7 @@ height: 60vh;
  min-height: 60vh;
  overflow: hidden;
 }
+
 /*================ firebase =================*/
 .firebase{
   position: relative;

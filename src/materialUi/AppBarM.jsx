@@ -34,10 +34,10 @@ function AppBarM({open,handleDrawerOpen,currentTheme,setBgTheme}) {
     setBgTheme(prop)
   }
   // vriable for handling mode icon transition 
-  const themeIcon =currentTheme=="white" ?<IconButton component="li" onClick={()=>handleTheme("dark")}><ModeNightIcon sx={{ fontSize: 27}} /></IconButton>:<IconButton component="li" onClick={()=>handleTheme("light")}><LightModeOutlinedIcon  sx={{ fontSize: 27}}/></IconButton>
+  const themeIcon =currentTheme=="white" ?<IconButton component="li" onClick={()=>handleTheme("dark")}><ModeNightIcon sx={{ fontSize:{"xs":20,"lg": 27}}} /></IconButton>:<IconButton component="li" onClick={()=>handleTheme("light")}><LightModeOutlinedIcon sx={{ fontSize:{"xs":20,"lg": 27}}}/></IconButton>
 
   return (
-    <AppBar position="relative" open={open} >
+    <AppBar position="relative" open={open}  sx={{width:"100%"}}>
           <Toolbar component="nav" className='d-flex justify-content-between'>
             <Box  className="d-flex align-items-center">
             <IconButton
@@ -57,19 +57,19 @@ function AppBarM({open,handleDrawerOpen,currentTheme,setBgTheme}) {
             </Typography>
             </Box>
             <SearchBar clicked={clicked} setClicked={setClicked} searchSm={searchSm} setSearchSm={setSearchSm} currentTheme={currentTheme}/>
-            <Box component="ul" sx={{maginLeft:"auto"}}className='d-flex justify-content-between'> 
+            <Box component="ul" sx={{maginLeft:"auto"}}className='d-flex '> 
               {themeIcon}
               <IconButton aria-label="search" component="li" className='sm-show lg-hide'onClick={()=>setSearchSm(!searchSm)}>
-                <SearchOutlinedIcon sx={{ fontSize: 27}}  />
+                <SearchOutlinedIcon sx={{ fontSize:{"xs":20,"lg": 27}}}  />
               </IconButton>
               <IconButton component="li">
-                <ReplayIcon sx={{ fontSize: 27}}/>
+                <ReplayIcon sx={{ fontSize:{"xs":20,"lg": 27}}}/>
               </IconButton>
               <IconButton component="li">
-                <SettingsIcon sx={{ fontSize: 27}}/>
+                <SettingsIcon sx={{ fontSize:{"xs":20,"lg": 27}}}/>
               </IconButton>
               <IconButton component="li">
-                <AppsIcon sx={{ fontSize: 27}}/>
+                <AppsIcon sx={{ fontSize:{"xs":20,"lg": 27}}}/>
               </IconButton>
               <IconButton component="li" >
                <Avatar sx={{width:"30px",height:"30px"}} alt="Cindy Baker" src="https://lh3.googleusercontent.com/ogw/ANLem4ZfW60JQsUOjgH6-8NwviwAQ56L9RECSZzL26_bSA=s32-c-mo" />

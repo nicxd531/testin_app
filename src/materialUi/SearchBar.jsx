@@ -22,7 +22,7 @@ function SearchBar({clicked ,setClicked,searchSm,setSearchSm,currentTheme}) {
         setSearchBar(true);
     }
   return (
-    <Box sx={{height:"48px",width:"50%",bgcolor:`${searchBar?"white": currentTheme}`,borderRadius:"5px"}} onClick={()=>setSearchBar(true)} className={`d-flex align-items-center px-3 sm-hide lg-show ${valid && searchSm ? "search-sm":""}`} >
+    <Box sx={{height:"48px",width:"50%",bgcolor:`${searchBar?"white": currentTheme}`,borderRadius:"5px", px:{"lg":3}}} onClick={()=>setSearchBar(true)} className={`d-flex align-items-center sm-hide lg-show ${valid && searchSm ? "search-sm":""}`} >
         {valid  ? <IconButton sx={{color:`${currentTheme = "white"?"black":"white"}`}}><ArrowBackIcon/></IconButton> :<IconButton sx={{color:`${currentTheme = "white"?"black":"white"}`}} onClick={()=>setClicked(true)}>
          <SearchIcon fontSize='large' />     
         </IconButton>}
