@@ -34,7 +34,7 @@ function Chart3jsHome() {
   return (
     <main className="background header-top-padding ">
         <IntroHeader description={description} header={header}/>
-        <Box>
+        <Box >
             <Tabs
                 defaultActiveKey="Chat 1"
                 id="uncontrolled-tab-example"
@@ -42,7 +42,7 @@ function Chart3jsHome() {
             >
                 <Tab eventKey="Chat 1" title="Bar Chart">
                     <Box sx={{mb:4}} className="d-flex justify-content-center align-items-center mx-4 w-100">
-                        <Paper sx={{height:"500px",p:2}}className="w-75 d-flex justify-content-center align-items-center">
+                        <Paper sx={{height:{"xs":"fit-content","lg":"500px"},p:2,width:{"xs":"80%","lg":'75%'}}}className=" d-flex justify-content-center align-items-center">
                             <BarChat chartData={userData2}/>
                         </Paper>
                     </Box>
@@ -56,14 +56,14 @@ function Chart3jsHome() {
                 </Tab>
                 <Tab eventKey="Chat 3" title="Pie Chart" >
                     <Box sx={{mb:4}} className="d-flex justify-content-center align-items-center mx-4">
-                        <Paper sx={{height:"500px"}} className="w-50 d-flex justify-content-center align-items-center">
+                        <Paper sx={{height:{"xs":"fit-content","lg":"500px"},p:2,width:{"xs":"80%","lg":'50%'}}} className=" d-flex justify-content-center align-items-center">
                             <PieChart chartData={userData2}/>
                         </Paper>
                     </Box>
                 </Tab>
                 <Tab eventKey="Chat 4" title="Doughnut Chart" >
                 <Box sx={{mb:4}} className="d-flex justify-content-center align-items-center mx-4">
-                        <Paper sx={{height:"500px"}} className="w-50 d-flex justify-content-center align-items-center ">
+                        <Paper sx={{height:{"xs":"fit-content","lg":"500px"},p:2,width:{"xs":"80%","lg":'50%'}}} className="d-flex justify-content-center align-items-center ">
                             <DoughnutChart chartData={userData2}/>
                         </Paper>
                     </Box>
