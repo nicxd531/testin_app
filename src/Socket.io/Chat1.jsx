@@ -28,7 +28,7 @@ function Chat1() {
     },[socket]);
   return (
     <Box className='d-flex justify-content-center align-items-center'>
-        <Paper className='my-5 d-flex ' sx={{minWidth:{xs:"400px",height:"500px" ,flexDirection:"column"}}}>
+        <Paper className='my-5 d-flex ' sx={{minWidth:{xs:"350px"},height:"500px" ,flexDirection:"column"}}>
             <Box color="primary" className="w-100 bg-success d-flex justify-content-center align-items-center" sx={{minHeight:"50px",borderTopRightRadius:"5px",borderTopLeftRadius:"5px"}}>
                 <Avatar sx={{ml:2}}/>
                 <Box sx={{flexGrow:"1",ml:2}}>
