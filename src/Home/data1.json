@@ -2,7 +2,7 @@
     {
         "heading":"Testing",
         "body":"Testing app is an app that was designed by Ola Olasunkanmi to help him test the new skill he just aquired i a place where he can come back and revist later , to learn from and alos teach others seeking knowledge",
-        "status":"in-progress"
+        "status":"completed"
     },
     {
         "heading":"React",
@@ -54,7 +54,7 @@
     {
         "heading":"Api Integration",
         "body":"API integration involves facilitating communication and data exchange between different software applications through standardized interfaces known as Application Programming Interfaces (APIs). These APIs define rules and methods, allowing applications to interact seamlessly. By enabling access to external services, data, or functionalities, API integration enhances the functionality of software applications, promoting efficiency, collaboration, and the creation of more powerful and versatile solutions. In essence, API integration is a vital aspect of modern software development that enables interoperability and the building of interconnected and feature-rich applications.",
-        "status":"in-progress"
+        "status":"completed"
     }
     ,
     {

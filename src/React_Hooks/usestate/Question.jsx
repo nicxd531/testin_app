@@ -12,7 +12,7 @@ function Question() {
   return (
     <section className='w-75 d-flex flex-column align-items-center'>
         <div className='w-75'>
-         <h2 className='bg-success text-center'>Question</h2>
+         <h2 className='bg-success text-center' data-testid="question">Question</h2>
         </div>
         <div className='my-3'>
             <h3>Pick the right answer</h3>
