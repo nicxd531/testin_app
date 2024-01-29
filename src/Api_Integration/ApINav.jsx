@@ -16,16 +16,6 @@ function ApINav() {
             <Link className='fs-5 text-success fw-bold' to={"/Api-Integration/fact-generator"}>Fact generator</Link>
         </Nav.Link>
       </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-2">
-            <Link className='fs-5 text-success fw-bold' to={"/Api-Integration/age-generator"}>Age Generator</Link>
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link  to={"/reactHome/useRef"} eventKey="link-3">
-            <Link className='fs-5 text-success fw-bold' to={"/Api-Integration/excuse-generator"}>Excuse generator</Link>
-        </Nav.Link>
-      </Nav.Item>
     </Nav>
     
   )

@@ -3,6 +3,7 @@ import React from 'react'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import LotSizeCalculator from './LotSizeCalculator';
+import JournalInput from "./lot size/JournalInput"
 
 function CalculatorHome() {
   // main calculator app ,it holds other components 
@@ -17,13 +18,13 @@ function CalculatorHome() {
         id="uncontrolled-tab-example"
         className="mb-3"
       >
-        <Tab eventKey="main-home" title="Main">
-          main home
+        <Tab eventKey="main-home" title="Journal Input">
+          <JournalInput/>
         </Tab>
         <Tab className='d-flex align-items-center justify-content-center pt-5' eventKey="lot size calculator" title="lot size calculator">
           <LotSizeCalculator/>
         </Tab>
-        <Tab eventKey="profile" title="Partial Profits">
+        <Tab eventKey="profile" title="Partial Profits" disabled>
           Tab content for Profile
         </Tab>
         <Tab eventKey="contact" title="Contact" disabled>

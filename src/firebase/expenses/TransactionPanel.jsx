@@ -31,10 +31,10 @@ function TransactionPanel({addTransaction}) {
         setTransactionType(event.target.value);
       };
   return (
-    <Box sx={{mb:5}}>
-        <FormControl onSubmit={onSubmit}>
+    <Box className='d-flex align-items-center justify-content-center ' sx={{mb:5}}>
+        <FormControl className='d-flex align-items-center justify-content-center '  onSubmit={onSubmit}>
             <Typography variant="h5" sx={{fontSize:{xs:"14px",lg:"1.5rem"}}}>Transaction Adding Panel</Typography>
-            <Box sx={{mt:2,flexDirection:{xs:"column",lg:"row"},alignItems:{xs:"start",lg:"center"}}} className="d-flex ">
+            <Box className='d-flex align-items-center justify-content-center ' sx={{mt:2,flexDirection:{xs:"column",lg:"row"},alignItems:{xs:"start",lg:"center"}}} >
                 <TextField sx={{mr:2 ,mb:{xs:2,lg:0}}} value={title} label="Title" onChange={(e)=>setTitle(e.target.value)}/>
                 <TextField label="description" value={description} onChange={(e)=>setDescription(e.target.value)}/>
                 <FormControl  sx={{ width:{xs:"75%",lg:"fit-content"},ml:{xs:0,lg:2},mt:{xs:2,lg:0}}}>

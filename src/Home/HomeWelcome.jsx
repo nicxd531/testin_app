@@ -11,7 +11,7 @@ function HomeWelcome({greeting}) {
     <section className='p-3 py-5  d-flex  flex-column text-lg-center p-lg-5'>
       <Greetings/>
       <h2 className=''>Welcome to </h2>
-      <h1 className='fw-bold'>Testing App</h1>
+      <h1 className='fw-bold'>Test-In App</h1>
       <h2 className=''> An app created to test newly acquired skill</h2>
       <h2 className=''>
         skills that includes:  

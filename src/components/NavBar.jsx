@@ -10,7 +10,7 @@ function NavBar() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary position-fixed w-100 navBar">
         <Container>
-            <Navbar.Brand className='w-25 fw-bold fs-2' href="/">Testing App</Navbar.Brand>
+            <Navbar.Brand className='w-25 fw-bold fs-2' href="/">Test-In App</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">

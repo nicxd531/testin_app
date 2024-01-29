@@ -22,6 +22,9 @@ h3 {
   font-family: 'Roboto Serif', serif;
 }  
 /*==============generic css ===========================*/
+.iframe{
+  width:200px
+}
 .background{
   background-image: url(/image/silvio-kundt-Fixg8KipOg8-unsplash.jpg);
   overflow: hidden;
@@ -193,6 +196,7 @@ height: 60vh;
 }
 .movies{
   background: url(/image/kiriko_cool_art_hd_overwatch_2-1366x768.jpg);
+  background-size: cover;
 }
 #drawerM2>*{
   position: absolute;

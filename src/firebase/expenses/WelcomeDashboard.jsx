@@ -7,6 +7,7 @@ function WelcomeDashboard({transactionTotal}) {
   // this component displays that account status
   // custom hook for getting user info
   const {name}=useGetUserInfo()
+  
   // object that contains acount information
   const {balance, expense,income}=transactionTotal
   return (

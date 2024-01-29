@@ -30,10 +30,12 @@ export default function ProfilePhoto() {
   const click =async ()=>{
     try{
     await signUserOut(auth)
+    // Remove a specific item from localStorage
     navigate("/firebase/login")
+    localStorage.setItem("auth",JSON.stringify(authStatus = false))
     }
     catch(err){
-console.error(err)
+    console.error(err)
     }
     handleClose()
 }

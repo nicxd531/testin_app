@@ -1,108 +1,74 @@
 import React,{ useState} from 'react'
-import IconButton from '@mui/material/IconButton';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
-import InputAdornment from '@mui/material/InputAdornment';
-import FormControl from '@mui/material/FormControl';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { Avatar, Box, Button, Paper, Typography } from '@mui/material';
-import { EmailOutlined } from '@mui/icons-material';
-import { Link, useNavigate ,Navigate} from 'react-router-dom';
-import {auth,provider} from "../config/firebase-config"
-import{signInWithPopup} from "firebase/auth"
-import { useGetUserInfo } from '../hooks/useGetUserInfo';
+import { Avatar, Button, Paper, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
+import GoogleButton from './auth/GoogleButton';
+import LoginEmail from './auth/LoginEmail';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
+import {auth} from"../config/firebase-config"
+import AppleButton from './auth/AppleButton';
+import { Alert } from 'react-bootstrap';
+import LoadingButton from '@mui/lab/LoadingButton';
 
 
 function LogIn() {
+  const [email, setEmail] =useState("");
+const [alert, setAlert] =useState(false);
+const [Password, setPassword] =useState("");
+const [loading, setLoading] = React.useState(false);
+
+
+
   // this is the componnent for logging into the app
   // states  for handling show password 
     const [showPassword, setShowPassword] =useState(false);
     // distructed custom hook for getting name and profile photo
-      const {isAuth}=useGetUserInfo()
-    // use navigate const for redirection 
-    const navigate = useNavigate();
     // functions for handling mouse down and showing password 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
+  
+  const navigate = useNavigate();
+  const signIn = async ()=> {
+    setLoading(true)
+    try{
 
-  const signInWithGoogle= async()=>{
-    // function for handling sign in with popup
-   const results = await signInWithPopup(auth, provider)
-   const authInfo ={
-    userID: results?.user?.uid,
-    name : results?.user?.displayName,
-    profilePhoto:results?.user?.photoURL,
-    isAuth: true
+      console.log("hello")
+        await signInWithEmailAndPassword(auth,email,Password)
+        const results = auth.currentUser
+           const authInfo ={
+            userID: results?.uid,
+            name : results?.email,
+            profilePhoto:results?.photoURL,
+            isAuth: true
+           }
+           localStorage.setItem("auth",JSON.stringify(authInfo))
+           navigate("/firebase/Dashboard-firebase")
+           setLoading(false)
+      
+    }catch(error){
+      // Handle sign-in errors
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.error('Sign-in error:', errorCode, errorMessage);
+      setAlert(`email/password doesn't match ${erroerrorCode}`)
+      setLoading(false)
+    }
    }
-   localStorage.setItem("auth",JSON.stringify(authInfo))
-   navigate("/firebase/Dashboard-firebase")
-}
-// this is used to check if the user is loggedin to navigate to dashboard
-if (isAuth){
-  return<Navigate to={"/firebase/Dashboard-firebase"}/>
-}
-
   return (
     <Paper sx={{maxWidth:"500px",p:3,m:5}} className="d-flex flex-column justify-content-center align-items-center ">
+      {alert &&  <Alert classname="w-100" variant="danger">{alert}</Alert>}
         <Typography  variant="h3" sx={{fontWeight:"bold"}}>WELCOME TO EM-APP</Typography>
-        <Typography variant='h6'>best movie watch list saver and expense traker</Typography>
-        
-    <FormControl sx={{ m: 1, width: '80%' ,mt:4}} variant="outlined" >
-          <InputLabel htmlFor="outlined-adornment-email">Email</InputLabel>
-          <OutlinedInput
-            id="outlined-adornment-email"
-            type='email' 
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="email"
-                  edge="end"
-                >
-                  <EmailOutlined/>
-                </IconButton>
-              </InputAdornment>
-            }
-            label="email"
-          />
-       
-    </FormControl>
-    <FormControl sx={{ m: 1, width: '80%' }} variant="outlined">
-          <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-          <OutlinedInput
-            id="outlined-adornment-password"
-            type={showPassword ? 'text' : 'password'}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                  onMouseDown={handleMouseDownPassword}
-                  edge="end"
-                >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            }
-            label="Password2"
-          />
-        </FormControl>
-        
+        <Typography variant='h6'>best movie watch list saver,fx calculator and expense traker</Typography>
+        <LoginEmail handleClickShowPassword={handleClickShowPassword} handleMouseDownPassword={handleMouseDownPassword} showPassword={showPassword} setPassword={setPassword} setEmail={setEmail}/>
             <Typography sx={{width:"80%", p:1,fontWeight:"bold"}} >
                  <Link >Forgot your password ?</Link>
             </Typography>
-        <Button variant="contained" size="large" sx={{width:"80%",fontSize:"14px"}}>Log In</Button>
+        <LoadingButton loading={loading} variant="contained" size="large" sx={{width:"80%",fontSize:"14px"}} onClick={signIn}> <span>Log In</span></LoadingButton>
         <Typography variant='h6' sx={{width:"80%", p:1,fontWeight:"bold",textAlign:"center"}}>OR</Typography>
-        <Button color="success" sx={{width:"80%",mb:2}} className="d-flex justify-content-center align-items-center bg-secondary br-5" onClick={signInWithGoogle}>
-            <Avatar alt="gogle sign in" src="/image/google.png" />
-            <Typography sx={{color:"black",fontWeight:"bold",ml:2}}>Continue with Google</Typography>
-        </Button>
-        <Button sx={{width:"80%",mb:2}} className="d-flex justify-content-center align-items-center bg-dark br-5">
-            <Avatar alt="apple sign in" src="/image/apple.png" />
-            <Typography sx={{color:"white",fontWeight:"bold",ml:2}}>Continue with Apple</Typography>
-        </Button>
+        <GoogleButton/>
+        <AppleButton/>
         <Typography sx={{fontWeight:"bold"}} >don't have an account ?  <Link to={"/firebase"}> Sign Up</Link></Typography>
     </Paper>
     
