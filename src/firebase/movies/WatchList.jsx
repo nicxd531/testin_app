@@ -5,11 +5,7 @@ import { deleteDoc,doc } from 'firebase/firestore'
 import {db} from "../../config/firebase-config"
 import {auth} from"../../config/firebase-config"
 
-
-
-
 function WatchList({movieList,getMovieList}) {
- 
   // main watchlist component
   // delete movie hndler
   const deleteMovieHandler =async(id)=>{
@@ -21,7 +17,6 @@ function WatchList({movieList,getMovieList}) {
   const results = auth.currentUser
   const userId =results?.uid
   const userData = movieList && movieList.filter(person => person.userID === userId); 
-
   return (
     <section>
         <Divider sx={{mt:4}}>
@@ -34,7 +29,6 @@ function WatchList({movieList,getMovieList}) {
             )})
         }
         </Box>
-        
     </section>
   )
 }
