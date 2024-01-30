@@ -19,9 +19,10 @@ function SigninEmail({setPassword,
     showPassword2,
    setEmail
 }) {
+  // main signup with email input
   return (
     <Box sx={{width:"100%"}} className="d-flex flex-column justify-content-center align-items-center ">
-         <FormControl sx={{ m: 1, width: '80%' ,mt:4}} variant="outlined" >
+        <FormControl sx={{ m: 1, width: '80%' ,mt:4}} variant="outlined" >
           <InputLabel htmlFor="outlined-adornment-email">Email</InputLabel>
           <OutlinedInput
             id="outlined-adornment-email"
@@ -40,10 +41,8 @@ function SigninEmail({setPassword,
             }
             label="email"
           />
-       
-    </FormControl>
+        </FormControl>
         <FormControl sx={{ m: 1, width: '80%' }} variant="outlined">
-
           <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-password"
@@ -65,9 +64,7 @@ function SigninEmail({setPassword,
             label="Password"
           />
         </FormControl>
-        
         <FormControl sx={{ m: 1, width: '80%' }} variant="outlined">
-
           <InputLabel htmlFor="outlined-adornment-confirm-password">Confirm Password</InputLabel>
           <OutlinedInput
             id="outlined-adornment-confirm-password"

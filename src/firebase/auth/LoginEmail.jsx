@@ -14,7 +14,7 @@ import { Box } from '@mui/material';
 
 
 function LoginEmail({handleClickShowPassword,handleMouseDownPassword,showPassword,setPassword,setEmail}) {
-
+  // main email login input
   return (
     <Box sx={{width:"80%"}} className="d-flex flex-column justify-content-center align-items-center ">
         <FormControl sx={{ m: 1, width: '100%' ,mt:4}} variant="outlined" >
@@ -35,7 +35,6 @@ function LoginEmail({handleClickShowPassword,handleMouseDownPassword,showPasswor
             }
             label="email"
           />
-       
         </FormControl>
         <FormControl sx={{ m: 1, width: '100%' }} variant="outlined">
             <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
@@ -58,7 +57,6 @@ function LoginEmail({handleClickShowPassword,handleMouseDownPassword,showPasswor
                 label="Password2"
             />
         </FormControl>
-        
     </Box>
   )
 }

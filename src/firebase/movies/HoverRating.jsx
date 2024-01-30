@@ -17,6 +17,7 @@ const labels = {
 };
 
 function getLabelText(value) {
+  // rating component
   return `${value} Star${value !== 1 ? 's' : ''}, ${labels[value]}`;
 }
 

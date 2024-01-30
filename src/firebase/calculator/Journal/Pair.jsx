@@ -10,7 +10,8 @@ import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 
 
-function Pair({setPair,name,HandleFileUpload,pair}) {
+function Pair({setPair,name,HandleFileUpload,pair,setRiskReward}) {
+    // main pair component
     const VisuallyHiddenInput = styled('input')({
         clip: 'rect(0 0 0 0)',
         clipPath: 'inset(50%)',
@@ -23,12 +24,13 @@ function Pair({setPair,name,HandleFileUpload,pair}) {
         width: 1,
       });
   return (
+    
     <Box>
         <Divider>
             <Chip sx={{fontSize:{"lg":"20px"},mt:2}} label="Pair/Trade Image" size="medium" />
         </Divider>
-        <Box className='d-flex justify-content-center align-items-center w-100'>
-            <FormControl sx={{mr:{"lg":3},mt:{"xs":3},width:{"xs":"80%","lg":"20%"}}} >
+        <Box sx={{flexDirection:{xs:"column",lg:"row"}}} className='d-flex justify-content-center align-items-center w-100'>
+            <FormControl sx={{mr:{"lg":3},mt:{"xs":2},width:{"xs":"80%","lg":"20%"}}} >
                     <InputLabel id="demo-simple-select-autowidth-label " sx={{fontSize:"14px"}}>Pair</InputLabel>
                     <Select
                     labelId="demo-simple-select-autowidth-label"
@@ -53,7 +55,7 @@ function Pair({setPair,name,HandleFileUpload,pair}) {
                     </Select>
                     
             </FormControl>
-            <TextField  id="outlined-basic" label="Risk/Reward" variant="outlined" />
+            <TextField sx={{width:{xs:"80%",lg:"20%"}}}  id="outlined-basic" label="Risk/Reward" variant="outlined" onChange={(e)=>setRiskReward(e.target.value)}/>
             <Box  className='d-flex justify-content-center align-items-center ' sx={{ml:{"lg":3},mt:{"xs":3},width:{"xs":"80%","lg":"20%"},flexDirection:"column"}}>
                 <Button  sx={{mr:{"lg":3},mt:{"xs":3},width:{"xs":"80%","lg":"100%"}}} component="label" variant="contained" startIcon={<CloudUploadIcon />}>
                     Upload file

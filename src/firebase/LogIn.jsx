@@ -13,48 +13,43 @@ import LoadingButton from '@mui/lab/LoadingButton';
 
 function LogIn() {
   const [email, setEmail] =useState("");
-const [alert, setAlert] =useState(false);
-const [Password, setPassword] =useState("");
-const [loading, setLoading] = React.useState(false);
-
-
-
+  const [alert, setAlert] =useState(false);
+  const [Password, setPassword] =useState("");
+  const [loading, setLoading] = React.useState(false);
   // this is the componnent for logging into the app
   // states  for handling show password 
     const [showPassword, setShowPassword] =useState(false);
     // distructed custom hook for getting name and profile photo
     // functions for handling mouse down and showing password 
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
-  
-  const navigate = useNavigate();
-  const signIn = async ()=> {
-    setLoading(true)
-    try{
-
-      console.log("hello")
-        await signInWithEmailAndPassword(auth,email,Password)
-        const results = auth.currentUser
-           const authInfo ={
-            userID: results?.uid,
-            name : results?.email,
-            profilePhoto:results?.photoURL,
-            isAuth: true
-           }
-           localStorage.setItem("auth",JSON.stringify(authInfo))
-           navigate("/firebase/Dashboard-firebase")
-           setLoading(false)
-      
-    }catch(error){
-      // Handle sign-in errors
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.error('Sign-in error:', errorCode, errorMessage);
-      setAlert(`email/password doesn't match ${erroerrorCode}`)
-      setLoading(false)
-    }
+    const handleClickShowPassword = () => setShowPassword((show) => !show);
+    const handleMouseDownPassword = (event) => {
+      event.preventDefault();
+    };
+    
+    const navigate = useNavigate();
+    // main sign in function
+    const signIn = async ()=> {
+      setLoading(true)
+      try{
+          await signInWithEmailAndPassword(auth,email,Password)
+          const results = auth.currentUser
+            const authInfo ={
+              userID: results?.uid,
+              name : results?.email,
+              profilePhoto:results?.photoURL,
+              isAuth: true
+            }
+            localStorage.setItem("auth",JSON.stringify(authInfo))
+            navigate("/firebase/Dashboard-firebase")
+            setLoading(false)
+      }catch(error){
+        // Handle sign-in errors
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error('Sign-in error:', errorCode, errorMessage);
+        setAlert(`email/password doesn't match ${erroerrorCode}`)
+        setLoading(false)
+      }
    }
   return (
     <Paper sx={{maxWidth:"500px",p:3,m:5}} className="d-flex flex-column justify-content-center align-items-center ">

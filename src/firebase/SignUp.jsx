@@ -8,8 +8,7 @@ import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from 'fireb
 import {auth} from"../config/firebase-config"
 import { useNavigate } from 'react-router-dom';
 import { Alert } from 'react-bootstrap';
-
-
+import LoadingButton from '@mui/lab/LoadingButton';
 
 
 function SignUp() {
@@ -22,28 +21,42 @@ function SignUp() {
     const [Password, setPassword] =useState("");
     const [confirmPassword, setComfirmPassword] =useState("");
     const [alert, setAlert] =useState(false);
-// function for handling mousedown and show password
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
-  const handleClickShowPassword2 = () => setShowPassword2((show) => !show);
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
-  
-   const signIn = async ()=> {
-    if (Password == confirmPassword){
-      setAlert(false)
-      await createUserWithEmailAndPassword(auth,email,Password)
-      const results = auth.currentUser
-         const authInfo ={
-          userID: results?.uid,
-          name : results?.email,
-          profilePhoto:results?.photoURL,
-          isAuth: true
-         }
-         localStorage.setItem("auth",JSON.stringify(authInfo))
-         navigate("/firebase/Dashboard-firebase")
-    }else{
-      setAlert("password doesn't match")
+  const [loading, setLoading] = React.useState(false);
+
+  // function for handling mousedown and show password
+    const handleClickShowPassword = () => setShowPassword((show) => !show);
+    const handleClickShowPassword2 = () => setShowPassword2((show) => !show);
+    const handleMouseDownPassword = (event) => {
+      event.preventDefault();
+    };
+    // main signUp function
+   const signUp = async ()=> {
+    setLoading(true)
+    try{
+      if (Password == confirmPassword){
+        setAlert(false)
+        await createUserWithEmailAndPassword(auth,email,Password)
+        const results = auth.currentUser
+           const authInfo ={
+            userID: results?.uid,
+            name : results?.email,
+            profilePhoto:results?.photoURL,
+            isAuth: true
+           }
+           localStorage.setItem("auth",JSON.stringify(authInfo))
+           navigate("/firebase/Dashboard-firebase")
+           setLoading(false)
+      }else{
+        setAlert("password doesn't match")
+        setLoading(false)
+      }
+    }catch(error){
+      // Handle sign-in errors
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.error('Sign-in error:', errorCode, errorMessage);
+      setAlert(`email/password doesn't match ${erroerrorCode}`)
+      setLoading(false)
     }
     
    }
@@ -56,7 +69,8 @@ function SignUp() {
         <Typography  sx={{width:"80%", p:1,fontWeight:"bold"}} >
               <Link >Forgot your password ?</Link>
         </Typography>
-        <Button variant="contained" size="large" sx={{width:"80%",fontSize:"14px"}} onClick={signIn} >Sign UP</Button>
+        {/* <Button variant="contained" size="large" sx={{width:"80%",fontSize:"14px"}} onClick={signUp} >Sign UP</Button> */}
+        <LoadingButton loading={loading} variant="contained" size="large" sx={{width:"80%",fontSize:"14px"}} onClick={signUp}> <span>Sign Up</span></LoadingButton>
         <Typography variant='h6' sx={{width:"80%", p:1,fontWeight:"bold",textAlign:"center"}}>OR</Typography>
         <GoogleButton/>
         <AppleButton/>

@@ -9,13 +9,31 @@ import Button from '@mui/material/Button';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import HoverRating from "./HoverRating"
 import SendIcon from '@mui/icons-material/Send';
+import { addDoc } from 'firebase/firestore'
+import {auth} from"../../config/firebase-config"
 
-function InputMovies({SetRecievedOscar,recievedOscar,SetRating,rating,setMovieTitle,setReleaseDate,setTrailerLink,setActorActress}) {
-    
+function InputMovies({movieCollectionRef,getMovieList}) {
+  const results = auth.currentUser
+    // main input component
     const [file,setFile]=useState()
     const [fileName,setFileName]=useState()
-    
-    
+    // states for the input component
+    const [movieTitle,setMovieTitle]=useState("")
+    const [realeseDate,setReleaseDate]=useState("")
+    const [actorActress,setActorActress]=useState("")
+    const [trailerLink,setTrailerLink]=useState("")
+    const [rating,SetRating]=useState(0)
+    const [recievedOscar,SetRecievedOscar]=useState(true)
+    // data for each watch list 
+    const newData={
+      movieTitle:movieTitle,
+      realeseDate:realeseDate,
+      actorActress:actorActress,
+      trailerLink:trailerLink,
+      rating:rating,
+      recievedOscar:recievedOscar,
+      userID: results?.uid
+    }
     const VisuallyHiddenInput = styled('input')({
         clip: 'rect(0 0 0 0)',
         clipPath: 'inset(50%)',
@@ -27,21 +45,28 @@ function InputMovies({SetRecievedOscar,recievedOscar,SetRating,rating,setMovieTi
         whiteSpace: 'nowrap',
         width: 1,
       });
+      // fuction for file upload
       let name = ""
       const HandleFileUpload=async(event)=>{
         const files = event.target.files;
         files &&  setFile(files)
         console.log(file,"the file")
         setFileName(file[0].name) 
-      
-       
       }
      if(!file){
         name = "please upload movie image"
      }else if(file){
        name = fileName
      }
-      
+    const addMovieHandler =async()=>{
+      try{
+
+        await addDoc(movieCollectionRef,newData)
+        getMovieList()
+      }catch (err){
+        console.log(err)
+      }
+    }
   return (
     <section>
         <Divider>
@@ -64,7 +89,7 @@ function InputMovies({SetRecievedOscar,recievedOscar,SetRating,rating,setMovieTi
                         </Typography>
                 </Box>
                 <HoverRating  value={rating} setValue={SetRating}/>
-                <Button  sx={{mr:{"lg":3},mt:{"xs":3},width:{"xs":"80%","lg":"20%"}}} component="label" variant="contained" endIcon={<SendIcon />}>
+                <Button onClick={addMovieHandler}  sx={{mr:{"lg":3},mt:{"xs":3},width:{"xs":"80%","lg":"20%"}}} component="label" variant="contained" endIcon={<SendIcon />}>
                     Add To Watch List
                 </Button>
             </FormGroup>
