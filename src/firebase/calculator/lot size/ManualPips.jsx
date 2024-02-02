@@ -42,10 +42,10 @@ function ManualPips({switchBtn,pips,setPips}) {
   return (
     <>
     <AnimatePresence>
-    {switchBtn && < motion.div exit={{x:1500}} initial={{y:-50}} animate={{y:0}} transition={{ type:"spring",stiffness:120}}>
-       <TextField id="outlined-basic" label="Entry price" variant="outlined" type="number" onChange={(e)=>setEntryPrice(e.target.value)} sx={{ml:2,mb:{xs:2}}}/>
-       <TextField id="outlined-basic" label="Exit Price" variant="outlined" type="number" onChange={(e)=>setExitPrice(e.target.value)}  sx={{ml:2,mb:{xs:2}}}/>
-       <FormControl variant="standard" sx={{  minWidth: 120,ml:2 }}>
+    {switchBtn && < motion.div  exit={{y:-1500,position:"absolute",top:"-30px"}} initial={{y:-50}} animate={{y:0}} transition={{ type:"spring",stiffness:120}}>
+       <TextField id="outlined-basic" label="Entry price" variant="outlined" type="number" onChange={(e)=>setEntryPrice(e.target.value)} sx={{ml:2,mb:{xs:2},width:{xs:"93%",lg:"25%"}}}/>
+       <TextField id="outlined-basic" label="Exit Price" variant="outlined" type="number" onChange={(e)=>setExitPrice(e.target.value)}  sx={{ml:2,mb:{xs:2},width:{xs:"93%",lg:"25%"}}}/>
+       <FormControl variant="standard" sx={{  minWidth: 120,ml:2 ,width:{xs:"90%",lg:"25%"}}}>
         <InputLabel id="demo-simple-select-standard-label" sx={{fontSize:"14px"}}>Pair</InputLabel>
         <Select
           labelId="demo-simple-select-standard-label"
@@ -70,7 +70,7 @@ function ManualPips({switchBtn,pips,setPips}) {
           <MenuItem value={"NAS100"}>NAS100</MenuItem>
         </Select>
       </FormControl>
-       <Button sx={{ml:2,my:1}} variant="contained" onClick={()=>handleClick(entryPrice,exitPrice)}>calculate</Button>
+       <Button sx={{ml:2,my:1,width:{xs:"95%",lg:"25%"}}} variant="contained" onClick={()=>handleClick(entryPrice,exitPrice)}>calculate</Button>
       {pips && <motion.div className='d-inline' initial={{x:250}} animate={{x:0}} transition={{delay:0.2, type:"spring",stiffness:120}}> <Chip sx={{ml:2,fontSize:"14px"}} label={pips+" pips"}  color="success" /></motion.div>}
     </motion.div>}
     </AnimatePresence>

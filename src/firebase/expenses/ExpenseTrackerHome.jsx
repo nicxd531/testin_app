@@ -13,7 +13,7 @@ function ExpenseTrackerHome() {
   const {transactions,transactionTotal}=useGetTransactions();
   const {addTransaction} = useAddTransaction();
   return (
-    <Box  className="expense-tracker-home d-flex justify-content-center align-items-center" sx={{flexGrow: 1,py:5 ,position:"relative",height:"fit-content"}}>
+    <Box  className="expense-tracker-home d-flex justify-content-center align-items-center w-100" sx={{flexGrow: 1,py:5 ,position:"relative",height:"fit-content"}}>
         <Paper sx={{opacity:"0.8",p:5,ml:{xs:7}, px:{lg:9}}}>
             <WelcomeDashboard transactionTotal={transactionTotal}/>
             <Divider/>

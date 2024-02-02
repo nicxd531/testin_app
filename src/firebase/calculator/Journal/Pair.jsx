@@ -30,7 +30,7 @@ function Pair({setPair,name,HandleFileUpload,pair,setRiskReward}) {
             <Chip sx={{fontSize:{"lg":"20px"},mt:2}} label="Pair/Trade Image" size="medium" />
         </Divider>
         <Box sx={{flexDirection:{xs:"column",lg:"row"}}} className='d-flex justify-content-center align-items-center w-100'>
-            <FormControl sx={{mr:{"lg":3},mt:{"xs":2},width:{"xs":"80%","lg":"20%"}}} >
+            <FormControl sx={{mr:{"lg":3},mt:{"xs":2},width:{"xs":"95%","lg":"20%"}}} >
                     <InputLabel id="demo-simple-select-autowidth-label " sx={{fontSize:"14px"}}>Pair</InputLabel>
                     <Select
                     labelId="demo-simple-select-autowidth-label"
@@ -55,9 +55,9 @@ function Pair({setPair,name,HandleFileUpload,pair,setRiskReward}) {
                     </Select>
                     
             </FormControl>
-            <TextField sx={{width:{xs:"80%",lg:"20%"}}}  id="outlined-basic" label="Risk/Reward" variant="outlined" onChange={(e)=>setRiskReward(e.target.value)}/>
+            <TextField sx={{width:{xs:"95%",lg:"20%"}}}  id="outlined-basic" label="Risk/Reward" variant="outlined" onChange={(e)=>setRiskReward(e.target.value)}/>
             <Box  className='d-flex justify-content-center align-items-center ' sx={{ml:{"lg":3},mt:{"xs":3},width:{"xs":"80%","lg":"20%"},flexDirection:"column"}}>
-                <Button  sx={{mr:{"lg":3},mt:{"xs":3},width:{"xs":"80%","lg":"100%"}}} component="label" variant="contained" startIcon={<CloudUploadIcon />}>
+                <Button  sx={{mr:{"lg":3},mt:{"xs":3},width:{"xs":"95%","lg":"100%"}}} component="label" variant="contained" startIcon={<CloudUploadIcon />}>
                     Upload file
                     <VisuallyHiddenInput type="file"  onChange={HandleFileUpload}/>
                 </Button>

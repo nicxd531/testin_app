@@ -46,21 +46,21 @@ function DataInput({pair,risk,pips,setPair,setRisk,setPips,setResult,result}) {
   
   
   return (
-    <Box sx={{display:{xs:"flex",lg:"block"},justifyContent:"start",alignItems:{xs:"center"},flexDirection:"column"}}>
-      <Box className="d-flex mb-5 mt-4" sx={{flexDirection:{xs:"column",lg:"row"}}}>
+    <Box sx={{display:{xs:"flex",lg:"block"},justifyContent:"start",alignItems:{xs:"center"},flexDirection:"column",overflow:"hidden"}}>
+      <Box className="d-flex  mb-5 mt-4" sx={{flexDirection:{xs:"column",lg:"column"},justifyContent:{xs:"center"},alignItems:{xs:"center"}}}>
         <FormControlLabel
           value="start"
           control={<Switch color="primary" />}
           label="Click to calculate pips"
           labelPlacement="start"
           onChange={()=> setSwitch(!switchBtn)}
-          sx={{ml:{xs:"0px",lg:"16px"}}}
+          sx={{ml:{xs:"0px",lg:"16px"},width:{lg:"20%"}}}
           />
           <ManualPips switchBtn={switchBtn} pips={pips} setPips={setPips}/>
       </Box>
-        <Box className=" d-flex mb-3 mt-3 align-items-center " sx={{flexDirection:{xs:"column",lg:"row"},justifyContent:{xs:"center",lg:"start"}}}>
-          <TextField id="outlined-basic" label="Input Pips" sx={{mb:{xs:2}}} variant="outlined" value={pips} onChange={(e)=>setPips(e.target.value)}/>
-          <FormControl  sx={{ ml: 1 ,mb:{xs:2}}}>
+        <Box className=" d-flex mb-3 mt-3 align-items-center " sx={{flexDirection:{xs:"column",lg:"row"},justifyContent:{xs:"center",lg:"start"},width:"100%"}}>
+          <TextField id="outlined-basic" label="Input Pips" sx={{mb:{xs:2},width:"95%"}} variant="outlined" value={pips} onChange={(e)=>setPips(e.target.value)}/>
+          <FormControl  sx={{ ml: {lg:1} ,mb:{xs:2},width:"95%"}}>
             <InputLabel htmlFor="outlined-adornment-amount" sx={{fontSize:"18px"}}>Risk </InputLabel>
             <OutlinedInput
               id="outlined-adornment-amount"
@@ -70,7 +70,7 @@ function DataInput({pair,risk,pips,setPair,setRisk,setPips,setResult,result}) {
               value={risk}
             />
           </FormControl>
-          <FormControl sx={{ ml: 1, minWidth: 150 }}>
+          <FormControl sx={{ ml: 1, minWidth: 150 ,width:"100%"}}>
             <InputLabel id="demo-simple-select-autowidth-label " sx={{fontSize:"14px"}}>Pair</InputLabel>
             <Select
               labelId="demo-simple-select-autowidth-label"
@@ -79,7 +79,7 @@ function DataInput({pair,risk,pips,setPair,setRisk,setPips,setResult,result}) {
               onChange={(e)=>setPair(e.target.value)}
               autoWidth
               label="pair"
-              sx={{mb:{xs:2},width:{xs:"85%"}}}
+              sx={{mb:{xs:2},width:{xs:"95%"}}}
             >
               <MenuItem value="">
                 <em>None</em>
@@ -97,7 +97,7 @@ function DataInput({pair,risk,pips,setPair,setRisk,setPips,setResult,result}) {
             </Select>
           </FormControl>
         </Box>
-        <Button variant="contained" sx={{ ml: 1,mb:{xs:3}}} onClick={()=>getLot(risk,pips,pair)}>Calculate</Button>
+        <Button variant="contained" sx={{ ml: 1,mb:{xs:3},width:{xs:"95%",lg:"25%"}}} onClick={()=>getLot(risk,pips,pair)}>Calculate</Button>
     </Box>
   )
 }
