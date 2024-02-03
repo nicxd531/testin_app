@@ -1,5 +1,4 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
-import './App.css'
 import HEADER from './components/HEADER'
 import Home from './components/Home'
 import ReduxHome from './Redux/ReduxHome'
