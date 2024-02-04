@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from '@mui/material'
 import { Route,Routes } from 'react-router-dom'
 import SignUp from './SignUp';
-import LogIn from './Login';
+import LogIn from './LogIn';
 
 
 function homepage() {
