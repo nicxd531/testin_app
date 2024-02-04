@@ -6,7 +6,7 @@ import DashboardAsideBar from './dashboardComp/DashboardAsideBar';
 import ExpenseTrackerHome from './expenses/ExpenseTrackerHome';
 import Movies from './movies/Movies';
 import CalculatorHome from './calculator/CalculatorHome';
-Dash
+
 
 function DashboardFirebase({setBgTheme,bgTheme}) {
   // this is the main dashboard component 
