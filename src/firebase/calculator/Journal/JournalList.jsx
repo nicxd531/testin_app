@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import { Box} from '@mui/material';
-import JournalCard from './journalCard';
+import JournalCard from './JournalCard';
 
 
 
