@@ -1,12 +1,12 @@
 import { Route,Routes } from 'react-router-dom';
 import React,{useState} from 'react'
 import { Box } from '@mui/material'
-import DashboardNavBar from './dashboardComp/dashboardNavBar';
+import DashboardNavBar from './dashboardComp/DashboardNavBar';
 import DashboardAsideBar from './dashboardComp/DashboardAsideBar';
 import ExpenseTrackerHome from './expenses/ExpenseTrackerHome';
 import Movies from './movies/Movies';
 import CalculatorHome from './calculator/CalculatorHome';
-
+Dash
 
 function DashboardFirebase({setBgTheme,bgTheme}) {
   // this is the main dashboard component 
