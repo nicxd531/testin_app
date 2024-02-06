@@ -56,7 +56,7 @@ function Transactions({transactions}) {
                   }
                 />
               </ListItem>
-                <Divider variant="inset" component="li" />
+                <Divider component="li" />
                 </Box>
             )
           })}
