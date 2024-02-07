@@ -63,7 +63,7 @@ socket.io-client: (4.7.3)
 Step-by-step guide on how to install project dependencies and run the project locally.
 
 # Clone the repository
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/nicxd531/testin_app.git
 
 # Change directory
 cd TESTING_APP (change directory in to the location of the folder in your pc )
