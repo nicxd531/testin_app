@@ -56,7 +56,7 @@ function Pair({setPair,name,HandleFileUpload,pair,setRiskReward}) {
                     
             </FormControl>
             <TextField sx={{width:{xs:"95%",lg:"20%"}}}  id="outlined-basic" label="Risk/Reward" variant="outlined" onChange={(e)=>setRiskReward(e.target.value)}/>
-            <Box  className='d-flex justify-content-center align-items-center ' sx={{ml:{"lg":3},mt:{"xs":3},width:{"xs":"80%","lg":"20%"},flexDirection:"column"}}>
+            {/* <Box  className='d-flex justify-content-center align-items-center ' sx={{ml:{"lg":3},mt:{"xs":3},width:{"xs":"80%","lg":"20%"},flexDirection:"column"}}>
                 <Button  sx={{mr:{"lg":3},mt:{"xs":3},width:{"xs":"95%","lg":"100%"}}} component="label" variant="contained" startIcon={<CloudUploadIcon />}>
                     Upload file
                     <VisuallyHiddenInput type="file"  onChange={HandleFileUpload}/>
@@ -64,7 +64,7 @@ function Pair({setPair,name,HandleFileUpload,pair,setRiskReward}) {
                 <Typography sx={{mr:{"lg":3},mt:{"xs":1},textAlign:"center"}}>
                     {name}
                 </Typography>
-            </Box>
+            </Box> */}
             
         </Box>
     </Box>

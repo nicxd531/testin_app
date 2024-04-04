@@ -1,28 +1,28 @@
 import React from 'react'
 import { Avatar, Button, Typography } from '@mui/material';
-import{signInWithPopup} from "firebase/auth"
+import { signInWithPopup } from "firebase/auth"
 import { useNavigate } from 'react-router-dom';
-import {auth,provider} from "../../config/firebase-config"
+import { auth, provider } from "../../config/firebase-config"
 
 function GoogleButton() {
-    // use navigate const for redirection 
-    const navigate = useNavigate();
-    // function for handling sign in with popup
-    const signInWithGoogle= async()=>{
-       const results = await signInWithPopup(auth, provider)
-       const authInfo ={
-        userID: results?.user?.uid,
-        name : results?.user?.displayName,
-        profilePhoto:results?.user?.photoURL,
-        isAuth: true
-       }
-       localStorage.setItem("auth",JSON.stringify(authInfo))
-       navigate("/firebase/Dashboard-firebase")
+  // use navigate const for redirection 
+  const navigate = useNavigate();
+  // function for handling sign in with popup
+  const signInWithGoogle = async () => {
+    const results = await signInWithPopup(auth, provider)
+    const authInfo = {
+      userID: results?.user?.uid,
+      name: results?.user?.displayName,
+      profilePhoto: results?.user?.photoURL,
+      isAuth: true
     }
+    localStorage.setItem("auth", JSON.stringify(authInfo))
+    navigate("/firebase/Dashboard-firebase")
+  }
   return (
-    <Button color="success" sx={{width:"80%",mb:2}} className="d-flex justify-content-center align-items-center bg-secondary br-5" onClick={signInWithGoogle}>
-        <Avatar alt="gogle sign in" src="/image/google.png" />
-        <Typography sx={{color:"black",fontWeight:"bold",ml:2}}>Continue with Google</Typography>
+    <Button color="success" sx={{ width: "80%", mb: 2 }} className="d-flex justify-content-center align-items-center bg-secondary br-5" onClick={signInWithGoogle}>
+      <Avatar alt="gogle sign in" src="/image/google.png" sx={{ width: { xs: "24px", lg: "24px" }, height: { xs: "24px", lg: "24px" } }} />
+      <Typography sx={{ color: "black", fontWeight: "bold", ml: 2, fontSize: { xs: "0.7rem", lg: "0.9rem" } }}>Continue with Google</Typography>
     </Button>
   )
 }

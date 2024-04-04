@@ -7,7 +7,7 @@ function MainContent({currentTheme}) {
    
   return (                                            
     <Box id="content-main" component="section" className={`${currentTheme== "white"? "black":"white"}`} sx={{ bgcolor:`${currentTheme=="black"?"black":"white"}` ,flexGrow: 1, p: 3 ,position:"relative",height:"fit-content"}}>
-        <Typography  sx={{position:"absolute"}}>
+        <Typography  sx={{position:"absolute",fontSize:{xs:"0.7rem",lg:"1rem"}}}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
         enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus

@@ -39,30 +39,31 @@ function Chart3jsHome() {
                 defaultActiveKey="Chat 1"
                 id="uncontrolled-tab-example"
                 className="mb-3"
+                justify
             >
                 <Tab eventKey="Chat 1" title="Bar Chart">
-                    <Box sx={{mb:4}} className="d-flex justify-content-center align-items-center mx-4 w-100">
-                        <Paper sx={{height:{"xs":"fit-content","lg":"500px"},p:2,width:{"xs":"80%","lg":'75%'}}}className=" d-flex justify-content-center align-items-center">
+                    <Box sx={{mb:4}} className="d-flex justify-content-center align-items-center">
+                        <Paper sx={{height:{xs:"100%",lg:"500px"},py:2,width:{xs:"80%",lg:'75%'}}}className=" d-flex justify-content-center align-items-center">
                             <BarChat chartData={userData2}/>
                         </Paper>
                     </Box>
                 </Tab>
                 <Tab eventKey="chat 2" title="Line Chart">
-                     <Box sx={{mb:4}} className="d-flex justify-content-center align-items-center mx-4">
+                     <Box sx={{mb:4}} className="d-flex justify-content-center align-items-center ">
                         <Paper className="w-75 p-4">
                             <LineChart chartData={userData2}/>
                         </Paper>
                     </Box>
                 </Tab>
                 <Tab eventKey="Chat 3" title="Pie Chart" >
-                    <Box sx={{mb:4}} className="d-flex justify-content-center align-items-center mx-4">
+                    <Box sx={{mb:4}} className="d-flex justify-content-center align-items-center ">
                         <Paper sx={{height:{"xs":"fit-content","lg":"500px"},p:2,width:{"xs":"80%","lg":'50%'}}} className=" d-flex justify-content-center align-items-center">
                             <PieChart chartData={userData2}/>
                         </Paper>
                     </Box>
                 </Tab>
                 <Tab eventKey="Chat 4" title="Doughnut Chart" >
-                <Box sx={{mb:4}} className="d-flex justify-content-center align-items-center mx-4">
+                <Box sx={{mb:4}} className="d-flex justify-content-center align-items-center ">
                         <Paper sx={{height:{"xs":"fit-content","lg":"500px"},p:2,width:{"xs":"80%","lg":'50%'}}} className="d-flex justify-content-center align-items-center ">
                             <DoughnutChart chartData={userData2}/>
                         </Paper>

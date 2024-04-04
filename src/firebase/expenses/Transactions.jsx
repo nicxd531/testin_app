@@ -14,10 +14,11 @@ function Transactions({transactions}) {
   // states for current page 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5; // Set the number of items per page
+  const  main =[...transactions].reverse()
   // const forlisting required pages 
   const totalPages = Math.ceil(transactions.length / itemsPerPage);
   // data slicing constant for items on each page
-  const currentData = transactions.slice(
+  const currentData = main.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );

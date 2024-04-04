@@ -31,6 +31,7 @@ function SignUp() {
     };
     // main signUp function
    const signUp = async ()=> {
+    setAlert(false)
     setLoading(true)
     try{
       if (Password == confirmPassword){
@@ -55,21 +56,20 @@ function SignUp() {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error('Sign-in error:', errorCode, errorMessage);
-      setAlert(`email/password doesn't match ${erroerrorCode}`)
+      setAlert(`email/password doesn't match ${errorCode}`)
       setLoading(false)
     }
     
    }
   return (
-    <Paper sx={{maxWidth:"500px",p:3,m:5}} className="d-flex flex-column justify-content-center align-items-center ">
+    <Paper sx={{Width:{xs:"90%",lg:"40%"},px:{xs:1,lg:5},py:{xs:4,lg:4},m:5}} className="d-flex flex-column justify-content-center align-items-center ">
       {alert &&  <Alert classname="w-100" variant="danger">{alert}</Alert>}
-        <Typography  variant="h4" sx={{fontWeight:"bold",textAlign:"center"}}>WELCOME TO EM-APP</Typography>
-        <Typography variant='h6'>best movie watch list saver and expense traker</Typography>
+        <Typography  variant="h4" sx={{fontWeight:"bold",textAlign:"center",fontSize:{xs:"2rem",lg:"3rem"}}}>WELCOME TO EM-APP</Typography>
+        <Typography variant='h6'  sx={{fontSize:{xs:"0.9rem",lg:"1rem"}}}>best movie watch list saver and expense traker</Typography>
         <SigninEmail setPassword={setPassword} handleClickShowPassword={handleClickShowPassword}  handleMouseDownPassword={handleMouseDownPassword} setComfirmPassword={setComfirmPassword}  showPassword={showPassword} showPassword2={showPassword2} setEmail={setEmail} handleClickShowPassword2={handleClickShowPassword2}/>
         <Typography  sx={{width:"80%", p:1,fontWeight:"bold"}} >
               <Link >Forgot your password ?</Link>
         </Typography>
-        {/* <Button variant="contained" size="large" sx={{width:"80%",fontSize:"14px"}} onClick={signUp} >Sign UP</Button> */}
         <LoadingButton loading={loading} variant="contained" size="large" sx={{width:"80%",fontSize:"14px"}} onClick={signUp}> <span>Sign Up</span></LoadingButton>
         <Typography variant='h6' sx={{width:"80%", p:1,fontWeight:"bold",textAlign:"center"}}>OR</Typography>
         <GoogleButton/>

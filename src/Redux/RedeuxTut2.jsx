@@ -8,11 +8,11 @@ import Update from './tutorial2/Update'
 function RedeuxTut2() {
   // this component contains the other components that make up the second redux tutorial with their rouers
   return (
-        <Routes>
-            <Route path='/' element={<ReduxTut2Home/>}/>
-            <Route path='/create' element={<Create/>}/>
-            <Route path='/edit/:id' element={<Update/>}/>
-        </Routes>
+    <Routes>
+      <Route path='/' element={<ReduxTut2Home />} />
+      <Route path='/create' element={<Create />} />
+      <Route path='/edit/:id' element={<Update />} />
+    </Routes>
   )
 }
 

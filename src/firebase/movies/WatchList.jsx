@@ -16,7 +16,8 @@ function WatchList({movieList,getMovieList}) {
 //  variable for uid and seperating user data
   const results = auth.currentUser
   const userId =results?.uid
-  const userData = movieList && movieList.filter(person => person.userID === userId); 
+  const main = [...movieList]
+  const userData = movieList && main.filter(person => person.userID === userId); 
   return (
     <section>
         <Divider sx={{mt:4}}>

@@ -26,7 +26,7 @@ function CalculatorHome() {
 }  
 useEffect(()=>{
   getJournalList()
-},[])
+},[journalList])
   // main calculator app ,it holds other components 
   return (
     <Box sx={{p:{xs:"30px",lg:"80px"}}} className='h-75 w-100  calculator-home '>
@@ -39,7 +39,6 @@ useEffect(()=>{
         id="uncontrolled-tab-example"
         className="mb-3 ms-5"
         justify
-      
       >
         <Tab eventKey="Journal-Input" title="Journal Input" >
           <JournalInput getJournalList={getJournalList}/>

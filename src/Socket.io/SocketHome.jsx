@@ -21,7 +21,7 @@ function SocketHome() {
                 defaultActiveKey="Chat 1"
                 id="uncontrolled-tab-example"
                 className="mb-3"
-                
+                justify
             >
                 <Tab eventKey="Chat 1" title="Victors Chat">
                  <Chat1/>

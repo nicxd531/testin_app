@@ -5,7 +5,7 @@ import { Box, IconButton } from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../config/firebase-config';
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -22,34 +22,34 @@ export default function ProfilePhoto() {
     setAnchorEl(null);
   };
   // signout function 
-  const signUserOut =async()=>{
+  const signUserOut = async () => {
     await signOut
   }
-  const navigate =useNavigate()
+  const navigate = useNavigate()
   // handle click function for signout 
-  const click =async ()=>{
-    try{
-    await signUserOut(auth)
-    // Remove a specific item from localStorage
-    navigate("/firebase/login")
-    localStorage.setItem("auth",JSON.stringify(authStatus = false))
+  const click = async () => {
+    try {
+      await signUserOut(auth)
+      // Remove a specific item from localStorage
+      navigate("/firebase/login")
+      localStorage.setItem("auth", JSON.stringify(authStatus = false))
     }
-    catch(err){
-    console.error(err)
+    catch (err) {
+      console.error(err)
     }
     handleClose()
-}
+  }
   return (
-    <Box sx={{display:{xs:"flex"}}}>
-          <IconButton component="li"
+    <Box sx={{ display: { xs: "flex" } }}>
+      <IconButton component="li"
         id="basic-button"
         aria-controls={open ? 'basic-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-       <SettingsIcon sx={{ fontSize: {xs:18,lg:27}}}/>
-        </IconButton>
+        <SettingsIcon sx={{ fontSize: { xs: 18, lg: 27 } }} />
+      </IconButton>
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}
