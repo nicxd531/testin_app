@@ -6,14 +6,14 @@ function ApINav() {
   return (
     <Nav justify variant="tabs" defaultActiveKey="/home">
       <Nav.Item>
-        <Nav.Link eventKey="link-4">
-          <Link className='fs-5 text-success fw-bold' to={"/Api-Integration"}>Joke Generator</Link>
+        <Nav.Link eventKey="link-4" to={"/Api-Integration"}>
+          <Link className='fs-5 text-success fw-bold w-100' to={"/Api-Integration"}>Joke Generator</Link>
         </Nav.Link>
       </Nav.Item>
       <Nav.Item>
-        <Nav.Link eventKey="link-1">
-          <Link className='fs-5 text-success fw-bold' to={"/Api-Integration/fact-generator"}>Fact generator</Link>
-        </Nav.Link>
+        <Nav.Link eventKey="link-1"  to={"/Api-Integration/fact-generator"}>
+          <Link className='fs-5 text-success fw-bold w-100' to={"/Api-Integration/fact-generator"}>Fact generator</Link>
+        </Nav.Link >
       </Nav.Item>
     </Nav>
 
